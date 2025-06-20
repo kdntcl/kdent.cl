@@ -25,13 +25,13 @@ Esta es la fase más crítica para obtener una mejora inmediata en el rendimient
 
 Esta fase es crucial para mejorar el SEO y la velocidad de renderizado inicial.
 
--   [ ] **Tarea 2.1: Instalar y Configurar Plugin de Pre-rendering**
-    -   [ ] Añadir `vite-plugin-prerender` como una dependencia de desarrollo.
-    -   [ ] Configurar el plugin en `vite.config.ts`.
+-   [x] **Tarea 2.1: Instalar y Configurar Plugin de Pre-rendering**
+    -   [x] Añadir `vite-plugin-prerender` como una dependencia de desarrollo.
+    -   [x] Configurar el plugin en `vite.config.ts`.
 
--   [ ] **Tarea 2.2: Definir Rutas para Pre-renderizar**
-    -   [ ] Listar todas las rutas estáticas en la configuración del plugin (`/`, `/sobre-nosotros`, `/ubicacion`, `/politica-de-privacidad`, `/terminos-y-condiciones`).
-    -   [ ] Investigar y definir una estrategia para pre-renderizar las rutas dinámicas (`/especialidades/:id`). Esto podría implicar obtener la lista de especialidades y generar una página para cada una.
+-   [x] **Tarea 2.2: Definir Rutas para Pre-renderizar**
+    -   [x] Listar todas las rutas estáticas en la configuración del plugin (`/`, `/sobre-nosotros`, `/ubicacion`, `/politica-de-privacidad`, `/terminos-y-condiciones`).
+    -   [x] Investigar y definir una estrategia para pre-renderizar las rutas dinámicas (`/especialidades/:id`). Esto podría implicar obtener la lista de especialidades y generar una página para cada una.
 
 ## Fase 3: Limpieza y Pulido Final
 

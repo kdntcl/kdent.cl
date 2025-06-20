@@ -74,7 +74,7 @@ const Hero = () => {
                 className="w-full h-full object-cover" 
                 src="/images/grupo-sonriendo.webp"
                 loading="eager"
-                fetchPriority="high"
+                fetchpriority="high"
                 decoding="async"
               />
             </div>

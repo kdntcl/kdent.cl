@@ -48,13 +48,13 @@ const Promociones = () => {
             <div className="p-6">
               <span className="inline-block px-3 py-1 bg-kdent-blue text-white text-xs rounded-full mb-2">Oferta Especial</span>
               <h3 className="font-display font-medium text-xl text-kdent-dark-blue">Mesoterapia con NCTF 135-HA + Higiene oral</h3>
-              <p className="text-gray-600 my-4 min-h-[72px]">Tratamiento combinado de estética facial y dental. Incluye: consulta inicial, 3 sesiones de NCTF 135-HA, control y seguimiento, más una sesión de higiene oral.</p>
+              <p className="text-gray-600 my-4 min-h-[72px]">Tratamiento combinado de estética facial y dental. Incluye: consulta inicial, una sesión de NCTF 135-HA, control y seguimiento, más una sesión de higiene oral.</p>
               
               <div className="flex items-baseline mb-4">
-                <span className="text-3xl font-display font-bold text-kdent-blue">$399.990</span>
-                <span className="ml-2 text-gray-500 line-through text-sm">$475.000</span>
+                <span className="text-3xl font-display font-bold text-kdent-blue">$129.990</span>
+                <span className="ml-2 text-gray-500 line-through text-sm">$170.000</span>
                 <span className="ml-2 bg-red-100 text-red-700 text-xs px-2 py-1 rounded">
-                  -16%
+                  -24%
                 </span>
               </div>
               
