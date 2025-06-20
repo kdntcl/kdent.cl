@@ -16,7 +16,7 @@ const Promociones = () => {
           animationDelay: '0s'
         }}>
             <div className="h-32 overflow-hidden">
-              <img alt="Botox 3 zonas - Promoción en Clínica KDENT Concepción" className="w-full h-full object-cover object-center" loading="lazy" width="400" height="225" src="/lovable-uploads/fe1f13f0-0965-45f1-9f06-d310db3e5eee.png" />
+              <img alt="Botox 3 zonas - Promoción en Clínica KDENT Concepción" className="w-full h-full object-cover object-center" loading="lazy" width="400" height="225" src="/images/promocion-botox.webp" />
             </div>
             
             <div className="p-6">
@@ -42,7 +42,7 @@ const Promociones = () => {
           animationDelay: '0.1s'
         }}>
             <div className="h-32 overflow-hidden">
-              <img alt="Mesoterapia con NCTF 135-HA + Higiene oral - Promoción en Clínica KDENT Concepción" className="w-full h-full object-cover object-center" loading="lazy" width="400" height="225" src="/lovable-uploads/5d9a9415-8fae-4487-ad7d-78513fd37116.jpg" />
+              <img alt="Mesoterapia con NCTF 135-HA + Higiene oral - Promoción en Clínica KDENT Concepción" className="w-full h-full object-cover object-center" loading="lazy" width="400" height="225" src="/images/promocion-mesoterapia.webp" />
             </div>
             
             <div className="p-6">
@@ -70,7 +70,7 @@ const Promociones = () => {
           animationDelay: '0.2s'
         }}>
             <div className="h-32 overflow-hidden">
-              <img alt="Higiene dental 3x2 - Promoción en Clínica KDENT Concepción" className="w-full h-full object-cover object-center" loading="lazy" width="400" height="225" src="/lovable-uploads/b5ed2762-0b6e-4f5d-8f74-bc26a3b69243.jpg" />
+              <img alt="Higiene dental 3x2 - Promoción en Clínica KDENT Concepción" className="w-full h-full object-cover object-center" loading="lazy" width="400" height="225" src="/images/promocion-higiene.webp" />
             </div>
             
             <div className="p-6">

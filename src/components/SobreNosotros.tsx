@@ -39,7 +39,7 @@ const SobreNosotros = memo(() => {
         <div className="relative animate-fade-in order-1 lg:order-2">
           <div className="absolute inset-0 bg-kdent-light-blue/30 rounded-2xl rotate-3 transform"></div>
           <div className="relative h-80 md:h-[500px] overflow-hidden rounded-2xl shadow-xl">
-            <img alt="Pacientes satisfechos en Clínica KDENT" className="w-full h-full object-cover" loading="lazy" src="/lovable-uploads/027c7b13-77f9-445f-af80-97fbe81e7868.jpg" />
+            <img alt="Pacientes satisfechos en Clínica KDENT" className="w-full h-full object-cover" loading="lazy" src="/images/pacientes-satisfechos.webp" />
           </div>
         </div>
       </div>

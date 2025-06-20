@@ -48,7 +48,7 @@ const EspecialidadPage = () => {
             }}>
                 <div className="absolute inset-0 bg-kdent-light-blue/30 rounded-2xl -rotate-2 transform"></div>
                 <div className="relative h-full overflow-hidden rounded-2xl shadow-xl">
-                  <img src="/lovable-uploads/7dac6877-e1c4-4a24-add9-771da91fa8d9.png" alt="Tratamiento de Urgencias en Clínica KDENT Concepción" className="w-full h-full object-cover" loading="lazy" />
+                  <img src="/images/urgencias.webp" alt="Tratamiento de Urgencias en Clínica KDENT Concepción" className="w-full h-full object-cover" loading="lazy" />
                 </div>
               </div>
             </div>
@@ -181,7 +181,7 @@ const EspecialidadPage = () => {
             }}>
                 <div className="absolute inset-0 bg-kdent-light-blue/30 rounded-2xl -rotate-2 transform"></div>
                 <div className="relative h-full overflow-hidden rounded-2xl shadow-xl">
-                  <img alt="Tratamiento de Estética Facial en Clínica KDENT Concepción" className="w-full h-full object-cover" loading="lazy" src="/lovable-uploads/17094830-28ed-42b5-83ad-b1c4451096f3.jpg" />
+                  <img alt="Tratamiento de Estética Facial en Clínica KDENT Concepción" className="w-full h-full object-cover" loading="lazy" src="/images/estetica-facial.webp" />
                 </div>
               </div>
             </div>
@@ -314,7 +314,7 @@ const EspecialidadPage = () => {
             }}>
                 <div className="absolute inset-0 bg-kdent-light-blue/30 rounded-2xl -rotate-2 transform"></div>
                 <div className="relative h-full overflow-hidden rounded-2xl shadow-xl">
-                  <img alt="Tratamiento de Endodoncia en Clínica KDENT Concepción" className="w-full h-full object-cover" loading="lazy" src="/lovable-uploads/ccd64cdf-e74e-4fc3-8607-0a5896b90564.jpg" />
+                  <img alt="Tratamiento de Endodoncia en Clínica KDENT Concepción" className="w-full h-full object-cover" loading="lazy" src="/images/endodoncia.webp" />
                 </div>
               </div>
             </div>
@@ -447,7 +447,7 @@ const EspecialidadPage = () => {
             }}>
                 <div className="absolute inset-0 bg-kdent-light-blue/30 rounded-2xl -rotate-2 transform"></div>
                 <div className="relative h-full overflow-hidden rounded-2xl shadow-xl">
-                  <img alt="Tratamiento de Rehabilitación Oral en Clínica KDENT Concepción" className="w-full h-full object-cover" loading="lazy" src="/lovable-uploads/c743bb70-767e-430f-9c90-c90d4bdf80c7.jpg" />
+                  <img alt="Tratamiento de Rehabilitación Oral en Clínica KDENT Concepción" className="w-full h-full object-cover" loading="lazy" src="/images/rehabilitacion-oral.webp" />
                 </div>
               </div>
             </div>
@@ -580,7 +580,7 @@ const EspecialidadPage = () => {
             }}>
                 <div className="absolute inset-0 bg-kdent-light-blue/30 rounded-2xl -rotate-2 transform"></div>
                 <div className="relative h-full overflow-hidden rounded-2xl shadow-xl">
-                  <img alt="Tratamiento de Implantología en Clínica KDENT Concepción" className="w-full h-full object-cover" loading="lazy" src="/lovable-uploads/c2b8c1a0-ac33-4897-8f38-ad2b4af18c9b.jpg" />
+                  <img alt="Tratamiento de Implantología en Clínica KDENT Concepción" className="w-full h-full object-cover" loading="lazy" src="/images/implantologia.webp" />
                 </div>
               </div>
             </div>
@@ -715,7 +715,7 @@ const EspecialidadPage = () => {
             }}>
                 <div className="absolute inset-0 bg-kdent-light-blue/30 rounded-2xl -rotate-2 transform"></div>
                 <div className="relative h-full overflow-hidden rounded-2xl shadow-xl">
-                  <img alt="Tratamiento de Estética Dental en Clínica KDENT Concepción" className="w-full h-full object-cover" loading="lazy" src="/lovable-uploads/e3c82b14-ceae-4082-8fcc-4a5d610f0393.jpg" />
+                  <img alt="Tratamiento de Estética Dental en Clínica KDENT Concepción" className="w-full h-full object-cover" loading="lazy" src="/images/estetica-dental.webp" />
                 </div>
               </div>
             </div>

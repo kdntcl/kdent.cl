@@ -1,50 +1,59 @@
-# Welcome to your Lovable project
+# Clínica KDENT - Sitio Web
 
-## Project info
+Bienvenido al repositorio del sitio web de la **Clínica KDENT**, una moderna aplicación web desarrollada para ofrecer una experiencia de usuario excepcional y una gestión de contenido eficiente. Este documento sirve como una guía completa para desarrolladores y administradores del sitio, detallando la arquitectura, tecnologías, y procedimientos operativos.
 
-**URL**: https://lovable.dev/projects/d17ba1b4-461d-465d-980c-85e38700c51c
+## 1. Descripción General del Proyecto
 
-## How can I edit this code?
+Este proyecto es una Single Page Application (SPA) construida con tecnologías web modernas, diseñada para ser rápida, escalable y fácil de mantener. El sitio web presenta los servicios de la clínica, información de contacto, y secciones informativas para los pacientes.
 
-There are several ways of editing your application.
+- **URL de Producción:** [https://www.kdnt.cl](https://www.kdnt.cl)
+- **Hosting:** Netlify
 
-**Use Lovable**
+## 2. Stack Tecnológico
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d17ba1b4-461d-465d-980c-85e38700c51c) and start prompting.
+El proyecto utiliza un stack tecnológico moderno y robusto, enfocado en el ecosistema de React:
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Framework Principal:** [React](https://react.dev/) v18
+- **Bundler y Entorno de Desarrollo:** [Vite](https://vitejs.dev/)
+- **Lenguaje:** [TypeScript](https://www.typescriptlang.org/)
+- **UI Components:** [shadcn/ui](https://ui.shadcn.com/) - Una colección de componentes de UI reutilizables y personalizables.
+- **Estilos:** [Tailwind CSS](https://tailwindcss.com/) - Un framework de CSS utility-first para un diseño rápido y consistente.
+- **Routing:** [React Router](https://reactrouter.com/) - Para la navegación y gestión de rutas en la aplicación.
+- **Gestión de Estado Asíncrono:** [TanStack Query](https://tanstack.com/query/latest) - Para la gestión de datos de servidor, caching, y sincronización.
 
-**Use your preferred IDE**
+## 3. Estructura del Proyecto
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+El proyecto sigue una estructura organizada y modular para facilitar el desarrollo y mantenimiento:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+/kdent.cl
+├── /public/                # Archivos estáticos (imágenes, favicon, etc.)
+├── /src/
+│   ├── /components/        # Componentes de React reutilizables
+│   │   ├── /ui/            # Componentes base de shadcn/ui
+│   │   └── ...             # Componentes específicos de la aplicación
+│   ├── /hooks/             # Hooks personalizados de React
+│   ├── /lib/               # Funciones de utilidad (e.g., utils.ts)
+│   ├── /pages/             # Componentes que representan las páginas del sitio
+│   ├── App.tsx             # Componente raíz con la configuración de rutas
+│   ├── main.tsx            # Punto de entrada de la aplicación
+│   └── index.css           # Estilos globales
+├── .gitignore              # Archivos y carpetas ignorados por Git
+├── index.html              # Punto de entrada HTML de la aplicación
+├── package.json            # Dependencias y scripts del proyecto
+├── tailwind.config.ts      # Configuración de Tailwind CSS
+├── tsconfig.json           # Configuración de TypeScript
+└── vite.config.ts          # Configuración de Vite
 ```
 
-**Edit a file directly in GitHub**
+## 4. Configuración y Puesta en Marcha
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Para configurar y ejecutar el proyecto en un entorno de desarrollo local, sigue estos pasos:
 
-**Use GitHub Codespaces**
+**Requisitos Previos:**
 
-- Navigate to the main page of your repository.
+- [Node.js](https://nodejs.org/en/) (versión 18 o superior)
+- [pnpm](https://pnpm.io/installation) (recomendado como gestor de paquetes)
 - Click on the "Code" button (green button) near the top right.
 - Select the "Codespaces" tab.
 - Click on "New codespace" to launch a new Codespace environment.

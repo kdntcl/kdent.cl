@@ -56,7 +56,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
             <a href="/" onClick={handleLogoClick} className="flex items-center">
-              <img alt="Clínica KDENT" className="h-20 object-contain" src="/lovable-uploads/ba625730-fbc0-4be8-b167-819564e4ae85.jpg" />
+              <img alt="Clínica KDENT" className="h-20 object-contain" src="/images/logo-kdent.webp" />
             </a>
             <a href="/" onClick={handleLogoClick} className="ml-3 text-gray-700 hover:text-kdent-blue transition-colors hidden sm:block">
               Clínica KDENT

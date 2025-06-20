@@ -15,7 +15,7 @@ const Especialidades = () => {
         animationDelay: '0s'
       }}>
           <div className="h-40 overflow-hidden">
-            <img alt="Urgencias en Clínica KDENT Concepción" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" src="/lovable-uploads/7dac6877-e1c4-4a24-add9-771da91fa8d9.png" />
+            <img alt="Urgencias en Clínica KDENT Concepción" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" src="/images/urgencias.webp" />
           </div>
           <div className="absolute top-0 left-0 w-1 h-full bg-kdent-blue transform origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
           <div className="p-6 space-y-4">
@@ -44,7 +44,7 @@ const Especialidades = () => {
         animationDelay: '0s'
       }}>
           <div className="h-40 overflow-hidden">
-            <img alt="Estética Facial en Clínica KDENT Concepción" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" src="/lovable-uploads/23ffcf22-d0c6-4a74-88bd-3eef80b17649.jpg" />
+            <img alt="Estética Facial en Clínica KDENT Concepción" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" src="/images/estetica-facial-2.webp" />
           </div>
           <div className="absolute top-0 left-0 w-1 h-full bg-kdent-blue transform origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
           <div className="p-6 space-y-4">
@@ -76,7 +76,7 @@ const Especialidades = () => {
         animationDelay: '0.1s'
       }}>
           <div className="h-40 overflow-hidden">
-            <img alt="Endodoncia en Clínica KDENT Concepción" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" src="/lovable-uploads/0c1061e0-b236-45c6-91a3-6377af02141a.jpg" />
+            <img alt="Endodoncia en Clínica KDENT Concepción" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" src="/images/endodoncia-2.webp" />
           </div>
           <div className="absolute top-0 left-0 w-1 h-full bg-kdent-blue transform origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
           <div className="p-6 space-y-4">
@@ -108,7 +108,7 @@ const Especialidades = () => {
         animationDelay: '0.2s'
       }}>
           <div className="h-40 overflow-hidden">
-            <img alt="Rehabilitación Oral en Clínica KDENT Concepción" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" src="/lovable-uploads/96e02df8-a4ab-4b7b-99ca-3a0712c1499b.jpg" />
+            <img alt="Rehabilitación Oral en Clínica KDENT Concepción" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" src="/images/rehabilitacion-oral-2.webp" />
           </div>
           <div className="absolute top-0 left-0 w-1 h-full bg-kdent-blue transform origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
           <div className="p-6 space-y-4">
@@ -140,7 +140,7 @@ const Especialidades = () => {
         animationDelay: '0.3s'
       }}>
           <div className="h-40 overflow-hidden">
-            <img alt="Implantología en Clínica KDENT Concepción" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" src="/lovable-uploads/532ec338-c8f4-4208-b493-52a6c4283229.jpg" />
+            <img alt="Implantología en Clínica KDENT Concepción" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" src="/images/implantologia-2.webp" />
           </div>
           <div className="absolute top-0 left-0 w-1 h-full bg-kdent-blue transform origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
           <div className="p-6 space-y-4">
@@ -172,7 +172,7 @@ const Especialidades = () => {
         animationDelay: '0.4s'
       }}>
           <div className="h-40 overflow-hidden">
-            <img alt="Estética Dental en Clínica KDENT Concepción" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" src="/lovable-uploads/2d78064f-1c48-4720-a50e-4f936d78337c.jpg" />
+            <img alt="Estética Dental en Clínica KDENT Concepción" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" src="/images/estetica-dental-2.webp" />
           </div>
           <div className="absolute top-0 left-0 w-1 h-full bg-kdent-blue transform origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
           <div className="p-6 space-y-4">

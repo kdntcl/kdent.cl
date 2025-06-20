@@ -45,16 +45,16 @@ const Hero = () => {
             <div className="flex items-center gap-6 pt-4">
               <div className="flex -space-x-2">
                 <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
-                  <img src="https://img.freepik.com/free-photo/portrait-happy-female-dental-patient-sitting-dentist-chair_1262-4575.jpg?t=st=1744119399~exp=1744122999~hmac=d38aa2ccb25ac97ac68e3a54a6f9b38577f61aacf95cff61cc7bf3ca9cc1bbca&w=740" alt="Paciente satisfecho en Clínica KDENT Concepción" className="w-full h-full object-cover" />
+                  <img src="/images/avatar-1.webp" alt="Paciente satisfecho en Clínica KDENT Concepción" className="w-full h-full object-cover" />
                 </div>
                 <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
-                  <img src="https://img.freepik.com/free-photo/portrait-young-handsome-bearded-man-standing-outdoors-city-street-smiling_1258-149732.jpg?t=st=1744119489~exp=1744123089~hmac=2b1f63ad5bd7e9eb65f7ce56b6df1c04a7ae1bbd35f71d8347b6e5e9c4b02e93&w=740" alt="Paciente de odontología en Concepción" className="w-full h-full object-cover" />
+                  <img src="/images/avatar-2.webp" alt="Paciente de odontología en Concepción" className="w-full h-full object-cover" />
                 </div>
                 <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
-                  <img src="https://img.freepik.com/free-photo/beautiful-brunette-latin-woman-with-vivid-makeup-smiling_176420-7366.jpg?t=st=1744119534~exp=1744123134~hmac=3de11ebd5a1b5f0dbeb0ac87b55e37b76d77eee3a33db7e1c83c27b90e2b9f0a&w=740" alt="Tratamiento de estética facial en Clínica KDENT" className="w-full h-full object-cover" />
+                  <img src="/images/avatar-3.webp" alt="Tratamiento de estética facial en Clínica KDENT" className="w-full h-full object-cover" />
                 </div>
                 <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
-                  <img src="https://img.freepik.com/free-photo/portrait-pretty-cheerful-girl-with-curly-hair_176420-226.jpg?t=st=1744119575~exp=1744123175~hmac=aecfb1e4d16b0764c77d3ae93faf25c95b0b3c30f71d2edeb87c99a51b6dbb4c&w=740" alt="Paciente de odontología estética en Concepción" className="w-full h-full object-cover" />
+                  <img src="/images/avatar-4.webp" alt="Paciente de odontología estética en Concepción" className="w-full h-full object-cover" />
                 </div>
               </div>
               <div>
@@ -72,7 +72,7 @@ const Hero = () => {
               <img 
                 alt="Equipo profesional de Clínica KDENT en Concepción - Especialistas en odontología y estética facial" 
                 className="w-full h-full object-cover" 
-                src="https://img.freepik.com/free-photo/group-business-executives-forming-huddle_1170-1719.jpg?t=st=1742863492~exp=1742867092~hmac=2d9297c28d02c3d16d21eacc6a7a198abec6d90ef78f78902c93b10d7f6cd648&w=740"
+                src="/images/grupo-sonriendo.webp"
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
