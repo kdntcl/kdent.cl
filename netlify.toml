@@ -1,6 +1,10 @@
 [build]
-  command = "npm run build && npm run prerender && npm run update-meta"
+  command = "npm run build && npm run update-meta"
   publish = "dist"
+
+# Plugin de prerenderizado de Netlify
+[[plugins]]
+  package = "netlify-plugin-prerender-spa"
 
 # Configuración para React SPA
 [[redirects]]
