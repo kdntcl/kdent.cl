@@ -23,11 +23,29 @@ export default defineConfig(({ mode }) => ({
         '/ubicacion',
         '/politica-de-privacidad',
         '/terminos-y-condiciones',
+        '/blog',
+
+        // Especialidades
         '/especialidades/urgencias',
+        '/especialidades/estetica-dental',
         '/especialidades/estetica-facial',
         '/especialidades/endodoncia',
         '/especialidades/rehabilitacion-oral',
-        '/especialidades/implantologia'
+        '/especialidades/implantologia',
+
+        // Artículos del Blog
+        '/blog/como-aliviar-dolor-de-muela',
+        '/blog/tipos-de-ortodoncia',
+        '/blog/importancia-limpieza-dental',
+        '/blog/odontopediatria-salud-bucal-ninos',
+        '/blog/bruxismo-causas-tratamientos',
+        '/blog/miedo-al-dentista-como-superarlo',
+        '/blog/blanqueamiento-dental-profesional',
+        '/blog/cuidados-post-extraccion-dental',
+        '/blog/alimentos-que-manchan-dientes',
+        '/blog/sensibilidad-dental-causas-soluciones',
+        '/blog/elegir-un-dentista-en-concepcion',
+        '/blog/gingivitis-periodontitis-cuidado-encias'
       ],
     }),
   ].filter(Boolean),

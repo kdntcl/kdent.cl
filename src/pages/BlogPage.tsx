@@ -5,11 +5,154 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 
+// Meta tags SEO para cada artículo del blog
+const getBlogMetaTags = (slug: string) => {
+  const metaTags = {
+    'como-aliviar-dolor-de-muela': {
+      title: 'Cómo Aliviar el Dolor de Muela | Remedios Caseros | KDENT Concepción',
+      description: 'Descubre cómo aliviar el dolor de muela con remedios caseros efectivos y cuándo acudir al dentista. Consejos profesionales de Clínica KDENT Concepción.',
+      keywords: 'dolor de muela, remedios caseros dolor dental, aliviar dolor dental, dentista concepción'
+    },
+    'tipos-de-ortodoncia': {
+      title: 'Tipos de Ortodoncia | Brackets y Alineadores | KDENT Concepción',
+      description: 'Conoce los diferentes tipos de ortodoncia: brackets metálicos, estéticos y alineadores invisibles. Guía completa de Clínica KDENT Concepción.',
+      keywords: 'tipos de ortodoncia, brackets, alineadores invisibles, ortodoncia concepción'
+    },
+    'importancia-limpieza-dental': {
+      title: 'Importancia de la Limpieza Dental | Profilaxis | KDENT Concepción',
+      description: 'Descubre por qué la limpieza dental profesional es fundamental para tu salud bucal. Beneficios de la profilaxis en Clínica KDENT Concepción.',
+      keywords: 'limpieza dental, profilaxis, higiene bucal, dentista concepción'
+    },
+    'odontopediatria-salud-bucal-ninos': {
+      title: 'Odontopediatría | Salud Bucal en Niños | KDENT Concepción',
+      description: 'Guía completa sobre odontopediatría y cuidado dental infantil. Consejos para mantener la salud bucal de los niños desde Clínica KDENT.',
+      keywords: 'odontopediatría, dentista niños, salud bucal infantil, dentista pediatrico concepción'
+    },
+    'bruxismo-causas-tratamientos': {
+      title: 'Bruxismo: Causas y Tratamientos | Rechinar Dientes | KDENT',
+      description: 'Todo sobre el bruxismo: causas, síntomas y tratamientos efectivos. Protege tus dientes del rechinar nocturno con Clínica KDENT Concepción.',
+      keywords: 'bruxismo, rechinar dientes, férula de descarga, tratamiento bruxismo concepción'
+    },
+    'miedo-al-dentista-como-superarlo': {
+      title: 'Cómo Superar el Miedo al Dentista | Odontofobia | KDENT',
+      description: 'Consejos profesionales para superar el miedo al dentista y la ansiedad dental. Técnicas de relajación y sedación en Clínica KDENT Concepción.',
+      keywords: 'miedo al dentista, odontofobia, ansiedad dental, sedación dental concepción'
+    },
+    'blanqueamiento-dental-profesional': {
+      title: 'Blanqueamiento Dental Profesional | Dientes Blancos | KDENT',
+      description: 'Blanqueamiento dental profesional vs casero. Resultados seguros y duraderos para una sonrisa más blanca en Clínica KDENT Concepción.',
+      keywords: 'blanqueamiento dental, dientes blancos, blanqueamiento profesional concepción'
+    },
+    'cuidados-post-extraccion-dental': {
+      title: 'Cuidados Post Extracción Dental | Recuperación | KDENT',
+      description: 'Guía completa de cuidados después de una extracción dental. Consejos para una recuperación rápida y sin complicaciones.',
+      keywords: 'extracción dental, cuidados post extracción, recuperación dental, cirugía oral concepción'
+    },
+    'alimentos-que-manchan-dientes': {
+      title: 'Alimentos que Manchan los Dientes | Prevención | KDENT',
+      description: 'Descubre qué alimentos manchan los dientes y cómo prevenir las manchas dentales. Consejos de Clínica KDENT para mantener dientes blancos.',
+      keywords: 'alimentos que manchan dientes, manchas dentales, prevención manchas, dientes blancos'
+    },
+    'sensibilidad-dental-causas-soluciones': {
+      title: 'Sensibilidad Dental: Causas y Soluciones | KDENT Concepción',
+      description: 'Todo sobre la sensibilidad dental: causas, tratamientos y prevención. Soluciones efectivas para el dolor por sensibilidad en KDENT.',
+      keywords: 'sensibilidad dental, dolor dental, tratamiento sensibilidad, dentista concepción'
+    },
+    'elegir-un-dentista-en-concepcion': {
+      title: 'Cómo Elegir un Dentista en Concepción | Guía Completa | KDENT',
+      description: 'Guía para elegir el mejor dentista en Concepción. Factores importantes a considerar para tu salud bucal. Consejos de Clínica KDENT.',
+      keywords: 'elegir dentista concepción, mejor dentista concepción, clínica dental concepción'
+    },
+    'gingivitis-periodontitis-cuidado-encias': {
+      title: 'Gingivitis y Periodontitis | Cuidado de Encías | KDENT',
+      description: 'Diferencias entre gingivitis y periodontitis. Tratamientos y prevención de enfermedades de las encías en Clínica KDENT Concepción.',
+      keywords: 'gingivitis, periodontitis, enfermedades encías, tratamiento periodontal concepción'
+    }
+  };
+  
+  return metaTags[slug as keyof typeof metaTags] || {
+    title: 'Blog Dental | Consejos y Tratamientos | Clínica KDENT Concepción',
+    description: 'Blog de salud dental con consejos, tratamientos y cuidados bucales. Información profesional de Clínica KDENT Concepción.',
+    keywords: 'blog dental, consejos dentales, salud bucal, clínica dental concepción'
+  };
+};
+
 const BlogPage = () => {
   const { slug } = useParams<{ slug: string }>();
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Actualizar meta tags dinámicamente para SEO
+    if (slug) {
+      const metaTags = getBlogMetaTags(slug);
+      
+      // Actualizar título
+      document.title = metaTags.title;
+      
+      // Actualizar meta description
+      let metaDescription = document.querySelector('meta[name="description"]');
+      if (!metaDescription) {
+        metaDescription = document.createElement('meta');
+        metaDescription.setAttribute('name', 'description');
+        document.head.appendChild(metaDescription);
+      }
+      metaDescription.setAttribute('content', metaTags.description);
+      
+      // Actualizar meta keywords
+      let metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (!metaKeywords) {
+        metaKeywords = document.createElement('meta');
+        metaKeywords.setAttribute('name', 'keywords');
+        document.head.appendChild(metaKeywords);
+      }
+      metaKeywords.setAttribute('content', metaTags.keywords);
+      
+      // Meta tags Open Graph
+      let ogTitle = document.querySelector('meta[property="og:title"]');
+      if (!ogTitle) {
+        ogTitle = document.createElement('meta');
+        ogTitle.setAttribute('property', 'og:title');
+        document.head.appendChild(ogTitle);
+      }
+      ogTitle.setAttribute('content', metaTags.title);
+      
+      let ogDescription = document.querySelector('meta[property="og:description"]');
+      if (!ogDescription) {
+        ogDescription = document.createElement('meta');
+        ogDescription.setAttribute('property', 'og:description');
+        document.head.appendChild(ogDescription);
+      }
+      ogDescription.setAttribute('content', metaTags.description);
+      
+      // Actualizar canonical URL
+      let canonical = document.querySelector('link[rel="canonical"]');
+      if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+      }
+      canonical.setAttribute('href', `https://kdnt.cl/blog/${slug}`);
+    } else {
+      // Meta tags para la página principal del blog
+      document.title = 'Blog Dental | Consejos y Tratamientos | Clínica KDENT Concepción';
+      
+      let metaDescription = document.querySelector('meta[name="description"]');
+      if (!metaDescription) {
+        metaDescription = document.createElement('meta');
+        metaDescription.setAttribute('name', 'description');
+        document.head.appendChild(metaDescription);
+      }
+      metaDescription.setAttribute('content', 'Blog de salud dental con consejos profesionales, tratamientos y cuidados bucales. Información actualizada de Clínica KDENT Concepción.');
+      
+      let canonical = document.querySelector('link[rel="canonical"]');
+      if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+      }
+      canonical.setAttribute('href', 'https://kdnt.cl/blog');
+    }
   }, [slug]);
 
   let content = null;

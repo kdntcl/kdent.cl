@@ -8,6 +8,25 @@ const PoliticaDePrivacidad = () => {
   // Scroll to top on page load
   React.useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Meta tags SEO para Política de Privacidad
+    document.title = 'Política de Privacidad | Clínica KDENT Concepción';
+    
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', 'Política de privacidad de Clínica KDENT Concepción. Conoce cómo protegemos tus datos personales y médicos.');
+    
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', 'https://kdnt.cl/politica-de-privacidad');
   }, []);
 
   return (

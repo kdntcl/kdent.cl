@@ -8,6 +8,53 @@ import SobreNosotros from '../components/SobreNosotros';
 const SobreNosotrosPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Meta tags SEO optimizados para Sobre Nosotros
+    document.title = 'Sobre Nosotros | Dentistas KDENT Concepción | Equipo Especializado';
+    
+    // Actualizar meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', 'Conoce al equipo de dentistas especializados de Clínica KDENT Concepción. Más de 10 años de experiencia en odontología y estética facial con tecnología avanzada.');
+    
+    // Actualizar meta keywords
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.setAttribute('name', 'keywords');
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.setAttribute('content', 'dentistas kdent concepción, equipo dental concepción, clínica dental concepción, sobre nosotros kdent');
+    
+    // Meta tags Open Graph
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (!ogTitle) {
+      ogTitle = document.createElement('meta');
+      ogTitle.setAttribute('property', 'og:title');
+      document.head.appendChild(ogTitle);
+    }
+    ogTitle.setAttribute('content', 'Sobre Nosotros | Dentistas KDENT Concepción | Equipo Especializado');
+    
+    let ogDescription = document.querySelector('meta[property="og:description"]');
+    if (!ogDescription) {
+      ogDescription = document.createElement('meta');
+      ogDescription.setAttribute('property', 'og:description');
+      document.head.appendChild(ogDescription);
+    }
+    ogDescription.setAttribute('content', 'Conoce al equipo de dentistas especializados de Clínica KDENT Concepción. Más de 10 años de experiencia en odontología y estética facial.');
+    
+    // Actualizar canonical URL
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', 'https://kdnt.cl/sobre-nosotros');
   }, []);
 
   return (

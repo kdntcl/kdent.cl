@@ -3,9 +3,57 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 import Ubicacion from '../components/Ubicacion';
+
 const UbicacionPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Meta tags SEO optimizados para Ubicación
+    document.title = 'Ubicación | Clínica KDENT Concepción | O\'Higgins 630 Oficina 403';
+    
+    // Actualizar meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', 'Visítanos en O\'Higgins 630, Oficina 403, Concepción. Clínica dental KDENT ubicada en el centro de Concepción con fácil acceso y estacionamiento.');
+    
+    // Actualizar meta keywords
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.setAttribute('name', 'keywords');
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.setAttribute('content', 'ubicación kdent concepción, dirección clínica dental concepción, ohiggins 630, dentista centro concepción');
+    
+    // Meta tags Open Graph
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (!ogTitle) {
+      ogTitle = document.createElement('meta');
+      ogTitle.setAttribute('property', 'og:title');
+      document.head.appendChild(ogTitle);
+    }
+    ogTitle.setAttribute('content', 'Ubicación | Clínica KDENT Concepción | O\'Higgins 630 Oficina 403');
+    
+    let ogDescription = document.querySelector('meta[property="og:description"]');
+    if (!ogDescription) {
+      ogDescription = document.createElement('meta');
+      ogDescription.setAttribute('property', 'og:description');
+      document.head.appendChild(ogDescription);
+    }
+    ogDescription.setAttribute('content', 'Visítanos en O\'Higgins 630, Oficina 403, Concepción. Clínica dental KDENT ubicada en el centro de Concepción con fácil acceso.');
+    
+    // Actualizar canonical URL
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', 'https://kdnt.cl/ubicacion');
   }, []);
   return <>
       <Navbar />
