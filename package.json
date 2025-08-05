@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run build:only && npm run prerender && npm run update-meta",
+    "build": "vite build",
     "build:dev": "vite build --mode development",
     "build:only": "vite build",
     "build:fast": "vite build",
