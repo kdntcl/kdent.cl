@@ -1,0 +1,19 @@
+# Netlify redirects for SPA
+# Especialidades
+/urgencias /urgencias/index.html 200
+/endodoncia /endodoncia/index.html 200
+/implantologia /implantologia/index.html 200
+/estetica-dental /estetica-dental/index.html 200
+/rehabilitacion-oral /rehabilitacion-oral/index.html 200
+/estetica-facial /estetica-facial/index.html 200
+
+# Páginas principales
+/sobre-nosotros /sobre-nosotros/index.html 200
+/ubicacion /ubicacion/index.html 200
+/blog /blog/index.html 200
+
+# Blog posts
+/blog/* /blog/:splat/index.html 200
+
+# Fallback para SPA
+/* /index.html 200
