@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/updateMetaTags.cjs",
     "build:dev": "vite build --mode development",
+    "build:only": "vite build",
+    "update-meta": "node scripts/updateMetaTags.cjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },

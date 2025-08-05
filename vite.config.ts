@@ -25,13 +25,13 @@ export default defineConfig(({ mode }) => ({
         '/terminos-y-condiciones',
         '/blog',
 
-        // Especialidades
-        '/especialidades/urgencias',
-        '/especialidades/estetica-dental',
-        '/especialidades/estetica-facial',
-        '/especialidades/endodoncia',
-        '/especialidades/rehabilitacion-oral',
-        '/especialidades/implantologia',
+        // Especialidades - Páginas Individuales
+        '/urgencias',
+        '/estetica-dental',
+        '/estetica-facial',
+        '/endodoncia',
+        '/rehabilitacion-oral',
+        '/implantologia',
 
         // Artículos del Blog
         '/blog/como-aliviar-dolor-de-muela',

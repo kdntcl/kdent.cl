@@ -26,34 +26,34 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kdnt.cl/especialidades/urgencias</loc>
-    <lastmod>2025-06-19</lastmod>
+    <loc>https://kdnt.cl/urgencias</loc>
+    <lastmod>2025-01-05</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kdnt.cl/estetica-facial</loc>
+    <lastmod>2025-01-05</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kdnt.cl/endodoncia</loc>
+    <lastmod>2025-01-05</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kdnt.cl/rehabilitacion-oral</loc>
+    <lastmod>2025-01-05</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kdnt.cl/implantologia</loc>
+    <lastmod>2025-01-05</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kdnt.cl/especialidades/estetica-facial</loc>
-    <lastmod>2025-06-19</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kdnt.cl/especialidades/endodoncia</loc>
-    <lastmod>2025-06-19</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kdnt.cl/especialidades/rehabilitacion-oral</loc>
-    <lastmod>2025-06-19</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kdnt.cl/especialidades/implantologia</loc>
-    <lastmod>2025-06-19</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kdnt.cl/especialidades/estetica-dental</loc>
-    <lastmod>2025-06-19</lastmod>
-    <priority>0.7</priority>
+    <loc>https://kdnt.cl/estetica-dental</loc>
+    <lastmod>2025-01-05</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://kdnt.cl/blog</loc>

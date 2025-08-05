@@ -6,16 +6,18 @@ Bienvenido al repositorio del sitio web de la **Clínica KDENT**. Este documento
 
 ## 🎯 Estado Actual del Proyecto
 
-**Última Actualización:** Enero 2025  
-**Versión:** 2.0 - Optimización SEO Completa  
-**Estado:** ✅ Producción - Totalmente Optimizado
+**Última Actualización:** Agosto 2025  
+**Versión:** 3.1 - SEO Crítico Resuelto + Meta Tags Estáticos  
+**Estado:** ✅ Producción - SEO Completamente Optimizado
 
 ### ✨ Características Principales Implementadas
 
 - ✅ **SSG (Static Site Generation)** para máximo rendimiento
+- ✅ **Páginas de especialidades individuales** para SEO optimizado
 - ✅ **Optimización SEO completa** con keyword mapping estratégico
 - ✅ **Blog integrado** con 12 artículos optimizados
-- ✅ **Meta tags dinámicos** para cada página y especialidad
+- ✅ **Meta tags estáticos** específicos por página en HTML prerenderizado
+- ✅ **Sistema post-build** para inyección automática de meta tags
 - ✅ **Imágenes optimizadas** en formato WebP
 - ✅ **Estructura semántica** y accesibilidad
 - ✅ **Schema markup avanzado** implementado
@@ -23,6 +25,7 @@ Bienvenido al repositorio del sitio web de la **Clínica KDENT**. Este documento
 - ✅ **WhatsApp flotante** con efectos y notificaciones
 - ✅ **Click-to-call** en todos los teléfonos
 - ✅ **Responsive design** con Tailwind CSS
+- ✅ **Arquitectura modular** con componentes reutilizables
 
 ## 1. Filosofía y Arquitectura del Proyecto
 
@@ -46,7 +49,8 @@ La aplicación utiliza herramientas modernas como Vite, React y TypeScript, pero
 
 ### SEO y Optimización
 - **SSG:** **`vite-plugin-prerender-esm-fix`** para generación estática
-- **Meta Tags:** Sistema dinámico basado en `mapping.md`
+- **Meta Tags Estáticos:** Sistema post-build con `scripts/updateMetaTags.cjs`
+- **Configuración Meta Tags:** `src/config/metaTags.ts` con datos específicos por página
 - **Imágenes:** Formato WebP optimizado
 - **Sitemap:** Generado automáticamente
 - **Schema Markup:** Preparado para servicios médicos
@@ -73,20 +77,31 @@ kdent.cl/
 ├── src/                     # Código fuente principal
 │   ├── components/          # Componentes reutilizables de React
 │   │   ├── ui/              # Componentes base de shadcn/ui
+│   │   ├── especialidades/  # Componentes específicos de especialidades
 │   │   ├── Hero.tsx         # Componente hero principal
 │   │   ├── Navbar.tsx       # Navegación principal
 │   │   ├── Footer.tsx       # Pie de página
 │   │   └── SEOHead.tsx      # Componente para meta tags dinámicos
+│   ├── config/              # Configuraciones del proyecto
+│   │   └── metaTags.ts      # Configuración de meta tags estáticos
 │   ├── lib/                 # Funciones de utilidad
 │   │   └── utils.ts         # Utilidades generales (cn de shadcn)
 │   ├── pages/               # Componentes de páginas completas
 │   │   ├── HomePage.tsx     # Página principal
 │   │   ├── BlogPage.tsx     # Blog con 12 artículos optimizados
-│   │   ├── EspecialidadPage.tsx # Páginas dinámicas de especialidades
+│   │   ├── especialidades/  # Páginas individuales de especialidades
+│   │   │   ├── EsteticaFacialPage.tsx
+│   │   │   ├── EndodonciaPage.tsx
+│   │   │   ├── ImplantologiaPage.tsx
+│   │   │   ├── UrgenciasPage.tsx
+│   │   │   ├── RehabilitacionOralPage.tsx
+│   │   │   └── EsteticaDentalPage.tsx
 │   │   ├── SobreNosotrosPage.tsx
 │   │   ├── UbicacionPage.tsx
 │   │   └── *.tsx            # Otras páginas del sitio
 │   └── main.tsx             # Punto de entrada de React
+├── scripts/                 # Scripts de automatización
+│   └── updateMetaTags.cjs   # Script post-build para meta tags estáticos
 ├── mapping.md               # 🔑 Keyword mapping y estrategia SEO
 ├── .gitignore               # Archivos ignorados por Git
 ├── index.html               # Plantilla HTML principal
@@ -103,6 +118,35 @@ kdent.cl/
 - **`BlogPage.tsx`**: Componente que contiene los 12 artículos de blog optimizados para SEO
 - **`vite.config.ts`**: Configuración de SSG con todas las rutas pre-renderizadas
 - **`public/sitemap.xml`**: Mapa del sitio actualizado con todas las URLs
+- **`src/pages/especialidades/`**: Páginas individuales de especialidades para SEO optimizado
+- **`src/components/especialidades/`**: Componentes reutilizables para especialidades
+- **`src/config/metaTags.ts`**: Configuración de meta tags estáticos por página
+- **`scripts/updateMetaTags.cjs`**: Script post-build para inyección de meta tags
+
+### 🏗️ Arquitectura de Especialidades (Nueva)
+
+El sitio ha migrado de una página monolítica de especialidades a **páginas individuales optimizadas para SEO**:
+
+#### Páginas de Especialidades Individuales:
+- **`/estetica-facial`** → `EsteticaFacialPage.tsx`
+- **`/endodoncia`** → `EndodonciaPage.tsx`
+- **`/implantologia`** → `ImplantologiaPage.tsx`
+- **`/urgencias`** → `UrgenciasPage.tsx`
+- **`/rehabilitacion-oral`** → `RehabilitacionOralPage.tsx`
+- **`/estetica-dental`** → `EsteticaDentalPage.tsx`
+
+#### Componentes Reutilizables:
+- **`EspecialidadLayout.tsx`**: Layout base para todas las especialidades
+- **`CTASection.tsx`**: Sección de llamada a la acción optimizada
+- **`FAQSection.tsx`**: Sección de preguntas frecuentes
+- **`ProcedureCard.tsx`**: Tarjetas de procedimientos
+
+#### Beneficios de la Nueva Arquitectura:
+- ✅ **SEO Mejorado**: URLs específicas para cada especialidad
+- ✅ **Mantenimiento Simplificado**: Edición independiente por especialidad
+- ✅ **Carga Optimizada**: Pre-renderizado individual de cada página
+- ✅ **Escalabilidad**: Fácil adición de nuevas especialidades
+- ✅ **Paridad Completa**: Contenido idéntico al original migrado
 
 ## 4. Arquitectura SEO Avanzada
 
@@ -155,6 +199,85 @@ Cada artículo incluye:
 - ✅ Contenido estructurado con H1, H2, H3
 - ✅ Enlaces internos estratégicos
 - ✅ Call-to-actions relevantes
+
+### 4.4. Sistema de Meta Tags Estáticos (CRÍTICO PARA SEO)
+
+**🚨 PROBLEMA RESUELTO:** Los meta tags dinámicos no se aplicaban durante el prerenderizado, causando que todas las páginas mostraran información genérica para crawlers.
+
+**✅ SOLUCIÓN IMPLEMENTADA:** Sistema de meta tags estáticos post-build que garantiza contenido SEO específico en cada página HTML prerenderizada.
+
+#### 4.4.1. Arquitectura del Sistema
+
+```typescript
+// src/config/metaTags.ts - Configuración centralizada
+export const metaTagsConfig = {
+  '/': {
+    title: 'Clínica Dental en Concepción | KDENT - Dentista de Confianza',
+    description: 'Clínica dental KDENT en Concepción...',
+    canonical: 'https://kdnt.cl/',
+    ogImage: 'https://kdnt.cl/images/og-image.webp'
+  },
+  '/endodoncia': {
+    title: 'Endodoncia en Concepción | Tratamiento de Conducto | KDENT',
+    description: 'Especialistas en endodoncia y tratamiento de conducto...',
+    canonical: 'https://kdnt.cl/endodoncia',
+    ogImage: 'https://kdnt.cl/images/endodoncia-og.webp'
+  }
+  // ... configuración para todas las páginas
+};
+```
+
+#### 4.4.2. Script Post-Build Automático
+
+```javascript
+// scripts/updateMetaTags.cjs - Ejecutado automáticamente tras el build
+const updateMetaTags = () => {
+  // 1. Lee configuración de meta tags
+  // 2. Recorre archivos HTML generados por prerenderizado
+  // 3. Reemplaza meta tags genéricos por específicos
+  // 4. Actualiza title, description, canonical, og, twitter cards
+};
+```
+
+#### 4.4.3. Integración en Build Process
+
+```json
+// package.json - Scripts actualizados
+{
+  "scripts": {
+    "build": "vite build && node scripts/updateMetaTags.cjs",
+    "update-meta": "node scripts/updateMetaTags.cjs"
+  }
+}
+```
+
+#### 4.4.4. Resultados Verificados
+
+**ANTES (❌ PROBLEMA):**
+```html
+<title>Clínica Dental en Concepción | KDENT</title>
+<meta name="description" content="Clínica dental KDENT...">
+<link rel="canonical" href="https://kdnt.cl/">
+```
+
+**DESPUÉS (✅ SOLUCIONADO):**
+```html
+<title>Endodoncia en Concepción | Tratamiento de Conducto | KDENT</title>
+<meta name="description" content="Especialistas en endodoncia...">
+<link rel="canonical" href="https://kdnt.cl/endodoncia">
+<meta property="og:url" content="https://kdnt.cl/endodoncia">
+<meta property="og:image" content="https://kdnt.cl/images/endodoncia-og.webp">
+```
+
+#### 4.4.5. Páginas con Meta Tags Específicos
+
+- ✅ **Homepage** (`/`): Meta tags principales con keywords de marca
+- ✅ **6 Especialidades**: Meta tags únicos por especialidad
+- ✅ **Páginas institucionales**: Sobre Nosotros, Ubicación
+- ✅ **12 Artículos de blog**: Meta tags optimizados por artículo
+- ✅ **Páginas legales**: Política de Privacidad, Términos
+
+**🎯 IMPACTO SEO:** Este sistema garantiza que cada página tenga títulos únicos, descripciones optimizadas, URLs canónicas correctas y meta tags de redes sociales específicos, crítico para indexación y ranking en buscadores.
 
 ## 5. Optimizaciones Críticas Implementadas
 
@@ -222,7 +345,11 @@ npm run dev
 npm run dev              # Servidor en http://localhost:5173
 
 # Compilación para producción
-npm run build            # Genera dist/ con SSG
+npm run build            # Genera dist/ con SSG + meta tags estáticos
+npm run build:only       # Solo build sin actualizar meta tags
+
+# Meta tags estáticos
+npm run update-meta      # Actualiza meta tags en dist/ existente
 
 # Preview del build
 npm run preview          # Sirve dist/ localmente
@@ -396,8 +523,8 @@ Sitemap: https://kdnt.cl/sitemap.xml
 
 - **Repositorio**: [https://github.com/kdntcl/kdent.cl](https://github.com/kdntcl/kdent.cl)
 - **Sitio Web**: [https://kdnt.cl](https://kdnt.cl)
-- **Estado**: ✅ Producción Activa
-- **Última Actualización**: Agosto 2025 - SEO Técnico Completo y CTAs Optimizados
+- **Estado**: ✅ Producción Activa - SEO Completamente Optimizado
+- **Última Actualización**: Agosto 2025 - Meta Tags Estáticos Implementados
 
 ## 12. Optimizaciones SEO Técnicas Implementadas
 
