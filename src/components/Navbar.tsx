@@ -3,22 +3,22 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
 const especialidades = [{
   name: 'Urgencias',
-  path: '/especialidades/urgencias'
+  path: '/urgencias'
 }, {
   name: 'Estética Facial',
-  path: '/especialidades/estetica-facial'
+  path: '/estetica-facial'
 }, {
   name: 'Endodoncia',
-  path: '/especialidades/endodoncia'
+  path: '/endodoncia'
 }, {
   name: 'Rehabilitación Oral',
-  path: '/especialidades/rehabilitacion-oral'
+  path: '/rehabilitacion-oral'
 }, {
   name: 'Implantología',
-  path: '/especialidades/implantologia'
+  path: '/implantologia'
 }, {
   name: 'Estética Dental',
-  path: '/especialidades/estetica-dental'
+  path: '/estetica-dental'
 }];
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,7 +65,7 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-8">
             <div className="relative">
-              <button className={`navlink flex items-center gap-1 ${location.pathname.includes('/especialidades') ? 'navlink-active' : ''}`} onClick={toggleDropdown}>
+              <button className={`navlink flex items-center gap-1 ${especialidades.some(esp => esp.path === location.pathname) ? 'navlink-active' : ''}`} onClick={toggleDropdown}>
                 Especialidades
                 {dropdownOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
               </button>
@@ -112,7 +112,7 @@ const Navbar = () => {
             </div>
             
             <div>
-              <button className={`w-full px-3 py-2 flex items-center justify-between ${location.pathname.includes('/especialidades') ? 'text-kdent-blue font-medium' : 'text-gray-700'}`} onClick={toggleDropdown}>
+              <button className={`w-full px-3 py-2 flex items-center justify-between ${especialidades.some(esp => esp.path === location.pathname) ? 'text-kdent-blue font-medium' : 'text-gray-700'}`} onClick={toggleDropdown}>
                 <span>Especialidades</span>
                 {dropdownOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
               </button>
