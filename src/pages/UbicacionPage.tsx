@@ -13,9 +13,11 @@ const UbicacionPage = () => {
         <div className="bg-gradient-to-b from-kdent-light-blue/50 to-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center animate-fade-in">
-              <h1 className="text-4xl md:text-5xl font-display font-bold text-kdent-dark-blue mb-6">Clínica KDENT</h1>
+              <h1 className="text-4xl md:text-5xl font-display font-bold text-kdent-dark-blue mb-6">
+                Clínica Dental Cerca de Ti en Concepción
+              </h1>
               <p className="text-xl text-kdent-dark-gray/80 max-w-3xl mx-auto">
-                Estamos ubicados en O'Higgins 630, Oficina 403, Concepción. Una zona céntrica y de fácil acceso para todos nuestros pacientes.
+                Dirección Clínica KDENT Concepción: O'Higgins 630, Oficina 403. Ubicados en el centro de Concepción para brindarte fácil acceso a la mejor atención dental de la región.
               </p>
             </div>
           </div>
@@ -60,6 +62,53 @@ const UbicacionPage = () => {
               <a href="https://wa.me/56922556473" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Agenda tu cita en Clínica KDENT
               </a>
+            </div>
+          </div>
+          
+          {/* Sección adicional de localización SEO */}
+          <div className="max-w-4xl mx-auto mt-16 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div className="bg-kdent-light-blue/20 rounded-2xl p-8">
+              <h2 className="text-3xl font-display font-semibold text-kdent-dark-blue mb-6 text-center">
+                ¿Buscas una Clínica Dental Cerca de Ti?
+              </h2>
+              <p className="text-lg text-kdent-dark-gray/80 text-center mb-8">
+                Clínica KDENT es tu clínica dental cerca de ti en Concepción. Nuestra dirección Clínica KDENT Concepción 
+                en O'Higgins 630, Oficina 403, nos posiciona estratégicamente en el centro de la ciudad para ofrecerte 
+                la mejor atención dental con fácil acceso desde cualquier punto de Concepción y sus alrededores.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="text-center">
+                  <div className="text-kdent-blue text-4xl mb-4">📍</div>
+                  <h3 className="text-xl font-semibold text-kdent-dark-blue mb-3">
+                    Ubicación Estratégica
+                  </h3>
+                  <p className="text-kdent-dark-gray/80">
+                    En pleno centro de Concepción, con fácil acceso en transporte público y privado. 
+                    Tu clínica dental cerca de ti.
+                  </p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="text-kdent-blue text-4xl mb-4">🚌</div>
+                  <h3 className="text-xl font-semibold text-kdent-dark-blue mb-3">
+                    Fácil Acceso
+                  </h3>
+                  <p className="text-kdent-dark-gray/80">
+                    Paraderos de micro a una cuadra, estacionamiento disponible y acceso 
+                    adaptado para personas con movilidad reducida.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="text-center mt-8">
+                <p className="text-lg font-medium text-kdent-dark-blue mb-4">
+                  Dirección Clínica KDENT Concepción:
+                </p>
+                <p className="text-xl text-kdent-dark-gray/80 font-semibold">
+                  O'Higgins 630, Oficina 403, Concepción
+                </p>
+              </div>
             </div>
           </div>
         </div>

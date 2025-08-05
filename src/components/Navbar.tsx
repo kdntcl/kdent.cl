@@ -81,6 +81,10 @@ const Navbar = () => {
               Sobre Nosotros
             </Link>
             
+            <Link to="/blog" className={`navlink ${location.pathname.includes('/blog') ? 'navlink-active' : ''}`}>
+              Blog
+            </Link>
+            
             <Link to="/ubicacion" className={`navlink ${location.pathname === '/ubicacion' ? 'navlink-active' : ''}`}>
               Ubicación
             </Link>
@@ -122,6 +126,10 @@ const Navbar = () => {
             
             <Link to="/sobre-nosotros" className={`block px-3 py-2 ${location.pathname === '/sobre-nosotros' ? 'text-kdent-blue font-medium' : 'text-gray-700'}`}>
               Sobre Nosotros
+            </Link>
+            
+            <Link to="/blog" className={`block px-3 py-2 ${location.pathname.includes('/blog') ? 'text-kdent-blue font-medium' : 'text-gray-700'}`}>
+              Blog
             </Link>
             
             <Link to="/ubicacion" className={`block px-3 py-2 ${location.pathname === '/ubicacion' ? 'text-kdent-blue font-medium' : 'text-gray-700'}`}>

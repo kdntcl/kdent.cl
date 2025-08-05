@@ -25,21 +25,53 @@ const Hero = () => {
           <div className="space-y-8 animate-fade-in">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-kdent-dark-blue leading-tight">
-                Clínica KDENT<br />Odontología y Estética Facial en Concepción
+                Clínica Dental en Concepción<br />KDENT - Tu Dentista de Confianza
               </h1>
               <p className="mt-6 text-xl text-kdent-dark-gray/80 max-w-lg">
-                En Clínica KDENT Concepción combinamos tecnología avanzada y atención personalizada para transformar tu salud dental y estética facial. Somos la clínica dental especializada que buscas en Concepción.
+                Somos la mejor clínica dental en Concepción. Dentistas especializados con tecnología avanzada y atención personalizada. Agenda tu hora con nosotros y descubre por qué somos el dentista bueno y barato que buscas en Concepción.
               </p>
             </div>
             
-            <div className="flex flex-wrap gap-4">
-              <a href="https://wa.me/56922556473" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                Agenda tu cita
-              </a>
-              <a href="#especialidades" onClick={scrollToEspecialidades} className="btn-secondary flex items-center gap-2">
-                <span>Explora nuestros tratamientos</span>
-                <ArrowRight size={18} />
-              </a>
+            {/* CTAs Agresivos */}
+            <div className="space-y-6">
+              {/* CTA Principal - Optimizado para mobile */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="https://wa.me/56922556473?text=Hola%20KDENT,%20quiero%20agendar%20mi%20CONSULTA%20GRATUITA.%20%C2%BFCu%C3%A1ndo%20tienen%20disponibilidad%3F" target="_blank" rel="noopener noreferrer" className="flex-1 bg-kdent-blue hover:bg-kdent-dark-blue text-white text-lg px-8 py-4 font-bold rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-center">
+                  CONSULTA GRATUITA - Agenda Ahora
+                </a>
+                <a href="tel:+56922556473" className="flex-1 sm:flex-none bg-kdent-light-blue hover:bg-kdent-blue text-kdent-dark-blue hover:text-white text-lg px-6 py-4 font-semibold rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                  Llamar Ahora
+                  <ArrowRight size={20} />
+                </a>
+              </div>
+              
+              {/* Beneficios principales - Simplificado */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                <div className="bg-kdent-light-blue/20 rounded-lg p-3 text-center">
+                  <span className="text-kdent-dark-blue font-semibold">✓ Primera Consulta GRATIS</span>
+                </div>
+                <div className="bg-kdent-light-blue/20 rounded-lg p-3 text-center">
+                  <span className="text-kdent-dark-blue font-semibold">✓ Atención Inmediata</span>
+                </div>
+                <div className="bg-kdent-light-blue/20 rounded-lg p-3 text-center">
+                  <span className="text-kdent-dark-blue font-semibold">✓ Financiamiento Disponible</span>
+                </div>
+              </div>
+
+              {/* Urgencias Banner - Más legible */}
+              <div className="bg-red-50/40 border border-red-200/40 p-3 rounded-lg text-center">
+                <p className="text-sm text-red-600">
+                  🆘 <span className="font-medium">¿Urgencia Dental?</span> 
+                  <a 
+                    href="https://wa.me/56922556473?text=URGENCIA%20DENTAL%20-%20Necesito%20atención%20inmediata" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-red-700 hover:text-red-800 underline font-semibold ml-1"
+                  >
+                    Contáctanos de inmediato
+                  </a>
+                </p>
+              </div>
             </div>
             
             <div className="flex items-center gap-6 pt-4">

@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="space-y-2 text-sm">
               <p>O'Higgins 630, Oficina 403</p>
               <p>Concepción, Chile</p>
-              <p>Teléfono: +569 2255 6473</p>
+              <p>Teléfono: <a href="tel:+56922556473" className="text-kdent-blue hover:text-kdent-dark-blue hover:underline">+569 2255 6473</a></p>
               <p>Email: contacto@kdnt.cl</p>
             </div>
             <div className="mt-4">
@@ -109,7 +109,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} Clínica KDENT. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Clínica KDENT</p>
         </div>
       </div>
     </footer>;

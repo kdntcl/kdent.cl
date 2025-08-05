@@ -40,7 +40,7 @@ const FAQ = () => {
               activeIndex === 0 ? 'max-h-96 py-4' : 'max-h-0 py-0'
             }`}
           >
-            <p className="text-gray-600">Puede agendar una cita llamando a nuestro número de teléfono +569 2255 6473 o enviando un mensaje de WhatsApp. Nuestro equipo de Clínica KDENT en Concepción le responderá a la brevedad para confirmar su cita.</p>
+            <p className="text-gray-600">Puede agendar una cita llamando a nuestro número de teléfono <a href="tel:+56922556473" className="text-kdent-blue hover:text-kdent-dark-blue hover:underline font-medium">+569 2255 6473</a> o enviando un mensaje de WhatsApp. Nuestro equipo de Clínica KDENT en Concepción le responderá a la brevedad para confirmar su cita.</p>
           </div>
         </div>
 

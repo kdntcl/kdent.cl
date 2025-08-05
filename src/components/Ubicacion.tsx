@@ -40,7 +40,7 @@ const Ubicacion = () => {
               <div>
                 <h4 className="font-medium text-gray-900">Teléfono</h4>
                 <p className="text-gray-600 mt-1">
-                  +56 9 2255 6473<br />
+                  <a href="tel:+56922556473" className="text-kdent-blue hover:text-kdent-dark-blue hover:underline font-medium">+56 9 2255 6473</a><br />
                   (WhatsApp disponible)
                 </p>
                 <p className="text-gray-600 mt-1">Email: Contacto@kdnt.cl</p>

@@ -4,6 +4,48 @@ import { ArrowLeft, Check } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
+
+// Meta tags SEO para cada especialidad
+const getMetaTags = (especialidad: string) => {
+  const metaTags = {
+    urgencias: {
+      title: 'Urgencia Dental Concepción | Dentista 24 Horas | Clínica KDENT',
+      description: 'Urgencias dentales en Concepción. Atención inmediata para dolor dental, traumatismos e infecciones. Clínica KDENT - Dentista 24 horas.',
+      keywords: 'urgencia dental concepción, dentista 24 horas concepción, dolor de muela, emergencia dental'
+    },
+    implantologia: {
+      title: 'Implantes Dentales Concepción | Implantología | Clínica KDENT',
+      description: 'Implantes dentales en Concepción con tecnología avanzada. Recupera tu sonrisa con implantología de calidad en Clínica KDENT.',
+      keywords: 'implantes dentales concepción, implantología, prótesis dental, reemplazo dientes'
+    },
+    'estetica-dental': {
+      title: 'Estética Dental Concepción | Carillas y Blanqueamiento | KDENT',
+      description: 'Estética dental en Concepción. Carillas, blanqueamiento y tratamientos estéticos para una sonrisa perfecta. Clínica KDENT.',
+      keywords: 'estética dental concepción, carillas dentales, blanqueamiento dental, sonrisa perfecta'
+    },
+    endodoncia: {
+      title: 'Endodoncia Concepción | Tratamiento de Conducto | Clínica KDENT',
+      description: 'Endodoncia en Concepción. Tratamientos de conducto especializados para salvar tus dientes. Clínica KDENT - Endodoncia sin dolor.',
+      keywords: 'endodoncia concepción, tratamiento de conducto, dolor dental, salvar diente'
+    },
+    'rehabilitacion-oral': {
+      title: 'Rehabilitación Oral Concepción | Prótesis Dentales | KDENT',
+      description: 'Rehabilitación oral en Concepción. Prótesis dentales, coronas y restauraciones completas. Recupera la función de tu boca en Clínica KDENT.',
+      keywords: 'rehabilitación oral concepción, prótesis dentales, coronas, restauración dental'
+    },
+    'estetica-facial': {
+      title: 'Estética Facial Concepción | Tratamientos Faciales | Clínica KDENT',
+      description: 'Estética facial en Concepción. Tratamientos faciales no invasivos para rejuvenecer tu rostro. Clínica KDENT - Belleza y salud.',
+      keywords: 'estética facial concepción, tratamientos faciales, rejuvenecimiento, belleza facial'
+    }
+  };
+  
+  return metaTags[especialidad as keyof typeof metaTags] || {
+    title: 'Especialidades Dentales | Clínica KDENT Concepción',
+    description: 'Especialidades dentales en Concepción. Atención odontológica integral con tecnología avanzada.',
+    keywords: 'especialidades dentales, clínica dental concepción, odontología'
+  };
+};
 const EspecialidadPage = () => {
   const {
     id
@@ -12,6 +54,50 @@ const EspecialidadPage = () => {
   }>();
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Actualizar meta tags dinámicamente
+    if (id) {
+      const metaTags = getMetaTags(id);
+      
+      // Actualizar title
+      document.title = metaTags.title;
+      
+      // Actualizar meta description
+      let metaDescription = document.querySelector('meta[name="description"]');
+      if (!metaDescription) {
+        metaDescription = document.createElement('meta');
+        metaDescription.setAttribute('name', 'description');
+        document.head.appendChild(metaDescription);
+      }
+      metaDescription.setAttribute('content', metaTags.description);
+      
+      // Actualizar meta keywords
+      let metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (!metaKeywords) {
+        metaKeywords = document.createElement('meta');
+        metaKeywords.setAttribute('name', 'keywords');
+        document.head.appendChild(metaKeywords);
+      }
+      metaKeywords.setAttribute('content', metaTags.keywords);
+      
+      // Meta tags Open Graph
+      let ogTitle = document.querySelector('meta[property="og:title"]');
+      if (!ogTitle) {
+        ogTitle = document.createElement('meta');
+        ogTitle.setAttribute('property', 'og:title');
+        document.head.appendChild(ogTitle);
+      }
+      ogTitle.setAttribute('content', metaTags.title);
+      
+      let ogDescription = document.querySelector('meta[property="og:description"]');
+      if (!ogDescription) {
+        ogDescription = document.createElement('meta');
+        ogDescription.setAttribute('property', 'og:description');
+        document.head.appendChild(ogDescription);
+      }
+      ogDescription.setAttribute('content', metaTags.description);
+    }
+    
     if (window.location.hash) {
       const element = document.getElementById(window.location.hash.substring(1));
       if (element) {
@@ -36,11 +122,11 @@ const EspecialidadPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-kdent-dark-blue mb-6">
-                  Urgencias
+                  Urgencia Dental Concepción
                 </h1>
-                <p className="text-xl text-kdent-dark-gray/80 mb-8">Atención inmediata para emergencias dentales como dolor agudo, infecciones o fracturas.</p>
-                <a href="https://wa.me/56922556473?text=Hola,%20me%20interesa%20información%20sobre%20los%20tratamientos%20de%20Urgencias" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                  Solicitar información
+                <p className="text-xl text-kdent-dark-gray/80 mb-8">Dentista 24 horas en Concepción. Atención inmediata para emergencias dentales como dolor agudo, infecciones o fracturas. ¿Qué hacer ante una urgencia dental? Contáctanos ahora.</p>
+                <a href="https://wa.me/56922556473?text=Hola,%20tengo%20una%20urgencia%20dental%20en%20Concepción,%20necesito%20atención%20inmediata" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  Urgencia Dental 24 Horas
                 </a>
               </div>
               <div className="relative h-80 md:h-[400px] animate-fade-in" style={{
@@ -141,14 +227,20 @@ const EspecialidadPage = () => {
                     Seguimiento post-tratamiento personalizado
                   </li>
                 </ul>
-                <div className="mt-8 bg-kdent-light-blue/40 rounded-lg p-5">
-                  <h4 className="font-display font-medium text-kdent-dark-blue mb-3">¿Tienes dudas sobre este tratamiento?</h4>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Contáctanos y te brindaremos toda la información que necesitas sin compromiso.
+                <div className="mt-8 bg-red-50 border-2 border-red-200 rounded-lg p-6">
+                  <h4 className="font-display font-bold text-red-700 mb-3 text-lg">🆘 ¿URGENCIA DENTAL? ¡Atención Inmediata!</h4>
+                  <p className="text-sm text-red-600 mb-4 font-medium">
+                    No esperes más. Dolor dental, trauma o emergencia - Te atendemos HOY mismo.
                   </p>
-                  <a href="https://wa.me/56922556473?text=Hola,%20me%20interesa%20información%20sobre%20los%20tratamientos%20de%20Urgencias" target="_blank" rel="noopener noreferrer" className="w-full btn-primary flex justify-center items-center">
-                    Contactar por WhatsApp
-                  </a>
+                  <div className="space-y-3">
+                    <a href="https://wa.me/56922556473?text=URGENCIA%20DENTAL%20-%20Necesito%20atención%20inmediata%20para%20urgencias" target="_blank" rel="noopener noreferrer" className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg flex justify-center items-center transition-all duration-300 shadow-lg hover:shadow-xl animate-pulse">
+                      💬 WhatsApp - URGENCIA AHORA
+                    </a>
+                    <a href="tel:+56922556473" className="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg flex justify-center items-center transition-all duration-300 animate-pulse">
+                      📞 LLAMAR DIRECTO - Urgencias
+                    </a>
+                  </div>
+                  <p className="text-xs text-red-500 text-center mt-2 font-medium">✓ Atención 24/7 para emergencias</p>
                 </div>
               </div>
             </div>
@@ -168,12 +260,12 @@ const EspecialidadPage = () => {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-kdent-dark-blue mb-6">Estética Facial</h1>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-kdent-dark-blue mb-6">Estética Facial Concepción</h1>
                 <p className="text-xl text-kdent-dark-gray/80 mb-8">
-                  Tratamientos no invasivos que realzan tu belleza natural y rejuvenecen tu rostro.
+                  Botox Concepción y tratamientos de estética facial no invasivos. Realzamos tu belleza natural y rejuvenecemos tu rostro con las técnicas más avanzadas.
                 </p>
-                <a href="https://wa.me/56922556473?text=Hola,%20me%20interesa%20información%20sobre%20los%20tratamientos%20de%20Estética%20Facial" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                  Solicitar información
+                <a href="https://wa.me/56922556473?text=Hola,%20quiero%20información%20sobre%20botox%20y%20estética%20facial%20en%20Concepción" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  Consultar Botox Concepción
                 </a>
               </div>
               <div className="relative h-80 md:h-[400px] animate-fade-in" style={{
@@ -274,14 +366,20 @@ const EspecialidadPage = () => {
                     Aumento de la autoestima y confianza
                   </li>
                 </ul>
-                <div className="mt-8 bg-kdent-light-blue/40 rounded-lg p-5">
-                  <h4 className="font-display font-medium text-kdent-dark-blue mb-3">¿Tienes dudas sobre este tratamiento?</h4>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Contáctanos y te brindaremos toda la información que necesitas sin compromiso.
+                <div className="mt-8 bg-gradient-to-r from-pink-50 to-purple-50 border-2 border-pink-200 rounded-lg p-6">
+                  <h4 className="font-display font-bold text-pink-700 mb-3 text-lg">✨ ¡Transformá tu Sonrisa HOY!</h4>
+                  <p className="text-sm text-pink-600 mb-4 font-medium">
+                    CONSULTA GRATUITA - Descubre cómo lucirás con nuestros tratamientos de estética facial.
                   </p>
-                  <a href="https://wa.me/56922556473?text=Hola,%20me%20interesa%20información%20sobre%20los%20tratamientos%20de%20Estética%20Facial" target="_blank" rel="noopener noreferrer" className="w-full btn-primary flex justify-center items-center">
-                    Contactar por WhatsApp
-                  </a>
+                  <div className="space-y-3">
+                    <a href="https://wa.me/56922556473?text=Hola%20KDENT,%20quiero%20mi%20CONSULTA%20GRATUITA%20de%20est%C3%A9tica%20facial.%20%C2%BFCu%C3%A1ndo%20puedo%20agendar%3F" target="_blank" rel="noopener noreferrer" className="w-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold py-3 px-6 rounded-lg flex justify-center items-center transition-all duration-300 shadow-lg hover:shadow-xl">
+                      💬 CONSULTA GRATIS - WhatsApp
+                    </a>
+                    <a href="tel:+56922556473" className="w-full bg-pink-400 hover:bg-pink-500 text-white font-bold py-3 px-6 rounded-lg flex justify-center items-center transition-all duration-300">
+                      📞 Llamar - Estética Facial
+                    </a>
+                  </div>
+                  <p className="text-xs text-pink-500 text-center mt-2 font-medium">✓ Sin compromiso • ✓ Evaluación personalizada</p>
                 </div>
               </div>
             </div>
@@ -301,12 +399,12 @@ const EspecialidadPage = () => {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-kdent-dark-blue mb-6">Endodoncia</h1>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-kdent-dark-blue mb-6">Endodoncia Concepción</h1>
                 <p className="text-xl text-kdent-dark-gray/80 mb-8">
-                  Especialistas en tratamientos de conducto para eliminar el dolor y salvar tus dientes naturales.
+                  Endodoncia en Concepción con especialistas en tratamientos de conducto. ¿Qué es una endodoncia? Te explicamos todo sobre este tratamiento para eliminar el dolor y salvar tus dientes naturales.
                 </p>
-                <a href="https://wa.me/56922556473?text=Hola,%20me%20interesa%20información%20sobre%20los%20tratamientos%20de%20Endodoncia" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                  Solicitar información
+                <a href="https://wa.me/56922556473?text=Hola,%20necesito%20información%20sobre%20endodoncia%20en%20Concepción" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  Consultar Endodoncia
                 </a>
               </div>
               <div className="relative h-80 md:h-[400px] animate-fade-in" style={{
@@ -407,14 +505,20 @@ const EspecialidadPage = () => {
                     Prevención de extracciones y complicaciones futuras
                   </li>
                 </ul>
-                <div className="mt-8 bg-kdent-light-blue/40 rounded-lg p-5">
-                  <h4 className="font-display font-medium text-kdent-dark-blue mb-3">¿Tienes dudas sobre este tratamiento?</h4>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Contáctanos y te brindaremos toda la información que necesitas sin compromiso.
+                <div className="mt-8 bg-gradient-to-r from-blue-50 to-teal-50 border-2 border-blue-200 rounded-lg p-6">
+                  <h4 className="font-display font-bold text-blue-700 mb-3 text-lg">🦷 ¡Salva tu Diente HOY!</h4>
+                  <p className="text-sm text-blue-600 mb-4 font-medium">
+                    EVALUACIÓN GRATUITA - No pierdas tu diente, la endodoncia puede salvarlo.
                   </p>
-                  <a href="https://wa.me/56922556473?text=Hola,%20me%20interesa%20información%20sobre%20los%20tratamientos%20de%20Endodoncia" target="_blank" rel="noopener noreferrer" className="w-full btn-primary flex justify-center items-center">
-                    Contactar por WhatsApp
-                  </a>
+                  <div className="space-y-3">
+                    <a href="https://wa.me/56922556473?text=Hola%20KDENT,%20tengo%20dolor%20dental%20y%20necesito%20EVALUACI%C3%93N%20GRATUITA%20de%20endodoncia.%20%C2%BFPueden%20atenderme%20pronto%3F" target="_blank" rel="noopener noreferrer" className="w-full bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white font-bold py-3 px-6 rounded-lg flex justify-center items-center transition-all duration-300 shadow-lg hover:shadow-xl">
+                      💬 EVALUACIÓN GRATIS - WhatsApp
+                    </a>
+                    <a href="tel:+56922556473" className="w-full bg-blue-400 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg flex justify-center items-center transition-all duration-300">
+                      📞 Llamar - Endodoncia
+                    </a>
+                  </div>
+                  <p className="text-xs text-blue-500 text-center mt-2 font-medium">✓ Salva tu diente natural • ✓ Sin dolor</p>
                 </div>
               </div>
             </div>
@@ -434,12 +538,12 @@ const EspecialidadPage = () => {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-kdent-dark-blue mb-6">Rehabilitación Oral</h1>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-kdent-dark-blue mb-6">Rehabilitación Oral Concepción</h1>
                 <p className="text-xl text-kdent-dark-gray/80 mb-8">
-                  Restauramos la función y estética de tu boca con las más avanzadas técnicas.
+                  Prótesis dentales Concepción y rehabilitación oral completa. Restauramos la función y estética de tu boca con las técnicas más avanzadas en odontología restaurativa.
                 </p>
-                <a href="https://wa.me/56922556473?text=Hola,%20me%20interesa%20información%20sobre%20los%20tratamientos%20de%20Rehabilitación%20Oral" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                  Solicitar información
+                <a href="https://wa.me/56922556473?text=Hola,%20quiero%20información%20sobre%20prótesis%20dentales%20y%20rehabilitación%20oral%20en%20Concepción" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  Consultar Prótesis Dentales
                 </a>
               </div>
               <div className="relative h-80 md:h-[400px] animate-fade-in" style={{
@@ -540,14 +644,20 @@ const EspecialidadPage = () => {
                     Soluciones personalizadas y duraderas
                   </li>
                 </ul>
-                <div className="mt-8 bg-kdent-light-blue/40 rounded-lg p-5">
-                  <h4 className="font-display font-medium text-kdent-dark-blue mb-3">¿Tienes dudas sobre este tratamiento?</h4>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Contáctanos y te brindaremos toda la información que necesitas sin compromiso.
+                <div className="mt-8 bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-lg p-6">
+                  <h4 className="font-display font-bold text-green-700 mb-3 text-lg">🦷 ¡Recupera tu Sonrisa Completa!</h4>
+                  <p className="text-sm text-green-600 mb-4 font-medium">
+                    PLAN PERSONALIZADO GRATIS - Diseñamos la rehabilitación perfecta para ti.
                   </p>
-                  <a href="https://wa.me/56922556473?text=Hola,%20me%20interesa%20información%20sobre%20los%20tratamientos%20de%20Rehabilitación%20Oral" target="_blank" rel="noopener noreferrer" className="w-full btn-primary flex justify-center items-center">
-                    Contactar por WhatsApp
-                  </a>
+                  <div className="space-y-3">
+                    <a href="https://wa.me/56922556473?text=Hola%20KDENT,%20necesito%20rehabilitación%20oral%20y%20quiero%20mi%20PLAN%20PERSONALIZADO%20GRATIS.%20%C2%BFCuándo%20puedo%20agendar%3F" target="_blank" rel="noopener noreferrer" className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold py-3 px-6 rounded-lg flex justify-center items-center transition-all duration-300 shadow-lg hover:shadow-xl">
+                      💬 PLAN GRATIS - WhatsApp
+                    </a>
+                    <a href="tel:+56922556473" className="w-full bg-green-400 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-lg flex justify-center items-center transition-all duration-300">
+                      📞 Llamar - Rehabilitación
+                    </a>
+                  </div>
+                  <p className="text-xs text-green-500 text-center mt-2 font-medium">✓ Sonrisa completa • ✓ Financiamiento disponible</p>
                 </div>
               </div>
             </div>
@@ -567,12 +677,12 @@ const EspecialidadPage = () => {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-kdent-dark-blue mb-6">Implantología</h1>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-kdent-dark-blue mb-6">Implantes Dentales Concepción</h1>
                 <p className="text-xl text-kdent-dark-gray/80 mb-8">
-                  Implantes dentales de titanio que lucen y funcionan como dientes naturales.
+                  Implantes dentales en Concepción con la mejor tecnología. Conoce precios y beneficios de los implantes dentales. Prótesis dentales y soluciones completas para recuperar tu sonrisa.
                 </p>
-                <a href="https://wa.me/56922556473?text=Hola,%20me%20interesa%20información%20sobre%20los%20tratamientos%20de%20Implantología" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                  Solicitar información
+                <a href="https://wa.me/56922556473?text=Hola,%20quiero%20conocer%20precio%20implantes%20dentales%20Concepción" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  Consultar Precio Implantes
                 </a>
               </div>
               <div className="relative h-80 md:h-[400px] animate-fade-in" style={{
@@ -675,14 +785,20 @@ const EspecialidadPage = () => {
                     Mejora en la calidad de vida y autoestima
                   </li>
                 </ul>
-                <div className="mt-8 bg-kdent-light-blue/40 rounded-lg p-5">
-                  <h4 className="font-display font-medium text-kdent-dark-blue mb-3">¿Tienes dudas sobre este tratamiento?</h4>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Contáctanos y te brindaremos toda la información que necesitas sin compromiso.
+                <div className="mt-8 bg-gradient-to-r from-indigo-50 to-blue-50 border-2 border-indigo-200 rounded-lg p-6">
+                  <h4 className="font-display font-bold text-indigo-700 mb-3 text-lg">🦷 ¡Dientes Fijos de por Vida!</h4>
+                  <p className="text-sm text-indigo-600 mb-4 font-medium">
+                    EVALUACIÓN 3D GRATUITA - Descubre si eres candidato para implantes dentales.
                   </p>
-                  <a href="https://wa.me/56922556473?text=Hola,%20me%20interesa%20información%20sobre%20los%20tratamientos%20de%20Implantología" target="_blank" rel="noopener noreferrer" className="w-full btn-primary flex justify-center items-center">
-                    Contactar por WhatsApp
-                  </a>
+                  <div className="space-y-3">
+                    <a href="https://wa.me/56922556473?text=Hola%20KDENT,%20quiero%20mi%20EVALUACIÓN%203D%20GRATUITA%20para%20implantes%20dentales.%20%C2%BFCuándo%20puedo%20agendar%3F" target="_blank" rel="noopener noreferrer" className="w-full bg-gradient-to-r from-indigo-500 to-blue-500 hover:from-indigo-600 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-lg flex justify-center items-center transition-all duration-300 shadow-lg hover:shadow-xl">
+                      💬 EVALUACIÓN 3D GRATIS - WhatsApp
+                    </a>
+                    <a href="tel:+56922556473" className="w-full bg-indigo-400 hover:bg-indigo-500 text-white font-bold py-3 px-6 rounded-lg flex justify-center items-center transition-all duration-300">
+                      📞 Llamar - Implantes
+                    </a>
+                  </div>
+                  <p className="text-xs text-indigo-500 text-center mt-2 font-medium">✓ Dientes fijos • ✓ Tecnología 3D avanzada</p>
                 </div>
               </div>
             </div>
@@ -702,12 +818,12 @@ const EspecialidadPage = () => {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-kdent-dark-blue mb-6">Estética Dental</h1>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-kdent-dark-blue mb-6">Blanqueamiento Dental Concepción</h1>
                 <p className="text-xl text-kdent-dark-gray/80 mb-8">
-                  Transforma tu sonrisa con carillas, blanqueamientos y otros tratamientos estéticos.
+                  Blanqueamiento dental y carillas dentales en Concepción. Descubre la diferencia entre blanqueamiento dental casero vs profesional. Sonrisa perfecta con estética dental.
                 </p>
-                <a href="https://wa.me/56922556473?text=Hola,%20me%20interesa%20información%20sobre%20los%20tratamientos%20de%20Estética%20Dental" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                  Solicitar información
+                <a href="https://wa.me/56922556473?text=Hola,%20quiero%20información%20sobre%20blanqueamiento%20dental%20Concepción" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  Consultar Blanqueamiento Dental
                 </a>
               </div>
               <div className="relative h-80 md:h-[400px] animate-fade-in" style={{
@@ -808,14 +924,20 @@ const EspecialidadPage = () => {
                     Soluciones personalizadas para cada paciente
                   </li>
                 </ul>
-                <div className="mt-8 bg-kdent-light-blue/40 rounded-lg p-5">
-                  <h4 className="font-display font-medium text-kdent-dark-blue mb-3">¿Tienes dudas sobre este tratamiento?</h4>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Contáctanos y te brindaremos toda la información que necesitas sin compromiso.
+                <div className="mt-8 bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200 rounded-lg p-6">
+                  <h4 className="font-display font-bold text-purple-700 mb-3 text-lg">✨ ¡Sonrisa de Revista HOY!</h4>
+                  <p className="text-sm text-purple-600 mb-4 font-medium">
+                    DISEÑO DE SONRISA GRATIS - Ve cómo lucirás antes de decidir.
                   </p>
-                  <a href="https://wa.me/56922556473?text=Hola,%20me%20interesa%20información%20sobre%20los%20tratamientos%20de%20Estética%20Dental" target="_blank" rel="noopener noreferrer" className="w-full btn-primary flex justify-center items-center">
-                    Contactar por WhatsApp
-                  </a>
+                  <div className="space-y-3">
+                    <a href="https://wa.me/56922556473?text=Hola%20KDENT,%20quiero%20mi%20DISEÑO%20DE%20SONRISA%20GRATIS%20y%20ver%20cómo%20luciré%20con%20estética%20dental.%20%C2%BFCuándo%20puedo%20agendar%3F" target="_blank" rel="noopener noreferrer" className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-6 rounded-lg flex justify-center items-center transition-all duration-300 shadow-lg hover:shadow-xl">
+                      💬 DISEÑO GRATIS - WhatsApp
+                    </a>
+                    <a href="tel:+56922556473" className="w-full bg-purple-400 hover:bg-purple-500 text-white font-bold py-3 px-6 rounded-lg flex justify-center items-center transition-all duration-300">
+                      📞 Llamar - Estética Dental
+                    </a>
+                  </div>
+                  <p className="text-xs text-purple-500 text-center mt-2 font-medium">✓ Sonrisa perfecta • ✓ Resultados inmediatos</p>
                 </div>
               </div>
             </div>
