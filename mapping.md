@@ -154,26 +154,26 @@ Este documento presenta la distribución estratégica de las 50 keywords identif
 ### 1. **Optimización On-Page por Página:**
 
 #### Homepage (/)
-- **Title:** "Clínica Dental en Concepción | KDNT - Dentista de Confianza"
-- **Meta Description:** "Clínica dental KDNT en Concepción. Dentistas especializados, tecnología avanzada y atención personalizada. Agenda tu hora online."
-- **H1:** "Clínica Dental en Concepción - KDNT"
+- **Title:** "Clínica Dental en Concepción | KDENT - Dentista de Confianza"
+- **Meta Description:** "Clínica dental KDENT en Concepción. Dentistas especializados, tecnología avanzada y atención personalizada. Agenda tu hora online."
+- **H1:** "Clínica Dental en Concepción - KDENT"
 - **H2:** "Tu Dentista de Confianza en Concepción"
 
 #### Urgencias (/especialidades/urgencias)
-- **Title:** "Urgencia Dental Concepción 24 Horas | Clínica KDNT"
-- **Meta Description:** "Urgencias dentales en Concepción. Atención inmediata para dolor dental, traumatismos e infecciones. Clínica KDNT."
+- **Title:** "Urgencia Dental Concepción 24 Horas | Clínica KDENT"
+- **Meta Description:** "Urgencias dentales en Concepción. Atención inmediata para dolor dental, traumatismos e infecciones. Clínica KDENT."
 - **H1:** "Urgencia Dental en Concepción"
 - **H2:** "Atención Dental 24 Horas"
 
 #### Implantología (/especialidades/implantologia)
-- **Title:** "Implantes Dentales Concepción - Precios y Tratamientos | KDNT"
-- **Meta Description:** "Implantes dentales en Concepción con la mejor tecnología. Conoce precios y beneficios en Clínica KDNT."
+- **Title:** "Implantes Dentales Concepción - Precios y Tratamientos | KDENT"
+- **Meta Description:** "Implantes dentales en Concepción con la mejor tecnología. Conoce precios y beneficios en Clínica KDENT."
 - **H1:** "Implantes Dentales en Concepción"
 - **H2:** "Recupera tu Sonrisa con Implantes"
 
 #### Estética Dental (/especialidades/estetica-dental)
-- **Title:** "Blanqueamiento Dental Concepción - Carillas | Clínica KDNT"
-- **Meta Description:** "Blanqueamiento dental y carillas en Concepción. Tratamientos estéticos dentales profesionales en Clínica KDNT."
+- **Title:** "Blanqueamiento Dental Concepción - Carillas | Clínica KDENT"
+- **Meta Description:** "Blanqueamiento dental y carillas en Concepción. Tratamientos estéticos dentales profesionales en Clínica KDENT."
 - **H1:** "Blanqueamiento Dental en Concepción"
 - **H2:** "Sonrisa Perfecta con Estética Dental"
 
