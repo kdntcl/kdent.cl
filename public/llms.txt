@@ -1,0 +1,51 @@
+# Clínica KDENT - Información para LLMs
+
+## Sobre Nosotros
+Clínica dental KDENT ubicada en Concepción, Chile. Especialistas en tratamientos dentales con más de 10 años de experiencia.
+
+- [Página Principal](https://kdnt.cl/)
+- [Sobre Nosotros](https://kdnt.cl/nosotros)
+- [Contacto](https://kdnt.cl/contacto)
+
+## Especialidades Dentales
+
+### Estética Dental
+- [Estética Dental](https://kdnt.cl/especialidades/estetica-dental)
+- Tratamientos: Carillas, blanqueamiento, diseño de sonrisa
+
+### Estética Facial
+- [Estética Facial](https://kdnt.cl/especialidades/estetica-facial)
+- Tratamientos: Botox, ácido hialurónico, rejuvenecimiento facial
+
+### Implantología
+- [Implantología](https://kdnt.cl/especialidades/implantologia)
+- Tratamientos: Implantes dentales, rehabilitación completa
+
+### Endodoncia
+- [Endodoncia](https://kdnt.cl/especialidades/endodoncia)
+- Tratamientos: Tratamiento de conducto, endodoncia microscópica
+
+### Rehabilitación Oral
+- [Rehabilitación Oral](https://kdnt.cl/especialidades/rehabilitacion-oral)
+- Tratamientos: Prótesis, coronas, puentes
+
+### Urgencias Dentales
+- [Urgencias Dentales](https://kdnt.cl/especialidades/urgencias)
+- Atención de emergencias dentales las 24 horas
+
+## Blog y Recursos
+- [Blog](https://kdnt.cl/blog)
+- [Artículos sobre salud dental](https://kdnt.cl/blog)
+
+## Información de Contacto
+- **Dirección**: Concepción, Chile
+- **Teléfono**: Disponible en el sitio web
+- **Email**: Disponible en el sitio web
+- **Horarios**: Lunes a Viernes, horarios disponibles en el sitio
+
+## Servicios Destacados
+- Tecnología de vanguardia
+- Atención personalizada
+- Financiamiento disponible
+- Agenda online
+- Especialistas certificados

@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:full": "vite build && node scripts/prerender-missing.cjs && node scripts/post-build-meta.cjs",
     "build:dev": "vite build --mode development",
     "build:only": "vite build",
     "build:fast": "vite build",
