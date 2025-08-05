@@ -7,8 +7,8 @@ Bienvenido al repositorio del sitio web de la **Clínica KDENT**. Este documento
 ## 🎯 Estado Actual del Proyecto
 
 **Última Actualización:** Agosto 2025  
-**Versión:** 3.2 - Prerenderizado Optimizado + SEO Crítico Resuelto  
-**Estado:** ✅ Producción - SEO y Prerenderizado Completamente Optimizados
+**Versión:** 3.3 - Optimización para Bots IA + SEO Avanzado  
+**Estado:** ✅ Producción - SEO, Prerenderizado y Bots IA Completamente Optimizados
 
 ### ✨ Características Principales Implementadas
 
@@ -28,6 +28,8 @@ Bienvenido al repositorio del sitio web de la **Clínica KDENT**. Este documento
 - ✅ **Click-to-call** en todos los teléfonos
 - ✅ **Responsive design** con Tailwind CSS
 - ✅ **Arquitectura modular** con componentes reutilizables
+- ✅ **Optimización para bots IA** (ChatGPT, Gemini, Claude)
+- ✅ **LLMs.txt** para Large Language Models
 
 ## 1. Filosofía y Arquitectura del Proyecto
 
@@ -76,7 +78,8 @@ kdent.cl/
 │   │   ├── blog-*.webp      # Imágenes específicas para artículos de blog
 │   │   ├── especialidades/  # Imágenes para cada especialidad
 │   │   └── *.webp           # Imágenes generales del sitio
-│   ├── robots.txt           # Reglas para crawlers de motores de búsqueda
+│   ├── robots.txt           # Reglas para crawlers tradicionales y bots IA
+│   ├── llms.txt             # Guía específica para Large Language Models
 │   └── sitemap.xml          # Mapa del sitio para indexación eficiente
 ├── src/                     # Código fuente principal
 │   ├── components/          # Componentes reutilizables de React
@@ -440,11 +443,47 @@ const updateMetaTags = () => {
 - **Meta Tags Dinámicos**: Sistema basado en `mapping.md`
 - **Structured Data**: Preparado para schema markup médico
 - **Sitemap XML**: Actualizado con todas las rutas
-- **Robots.txt**: Configurado para indexación óptima
+- **Robots.txt**: Optimizado para crawlers tradicionales y bots IA (GPTBot, Claude, etc.)
+- **LLMs.txt**: Archivo guía específico para Large Language Models
 - **URLs Semánticas**: Estructura amigable para SEO
 - **Internal Linking**: Enlaces internos estratégicos
 
-### 5.4. Rendimiento Web
+### 5.4. Optimización para Bots IA (Novedad 2024)
+
+**🤖 PROBLEMA RESUELTO:** ChatGPT, Gemini y Claude reportaban que la web estaba "vacía" debido a que sus user-agents no eran reconocidos por el prerenderizado selectivo de Netlify.
+
+**✅ SOLUCIÓN IMPLEMENTADA:**
+
+#### 5.4.1. Robots.txt Optimizado para IA
+```txt
+# AI/LLM Crawlers - Explicitly allowed
+User-agent: GPTBot          # OpenAI ChatGPT
+User-agent: ChatGPT-User    # ChatGPT web crawling
+User-agent: Claude-Web      # Anthropic Claude
+User-agent: ClaudeBot       # Claude bot
+User-agent: Google-Extended # Google AI training
+User-agent: Bingbot         # Bing Chat
+User-agent: CCBot           # Common Crawl (usado por muchos LLMs)
+Allow: /
+```
+
+#### 5.4.2. LLMs.txt - Guía para Large Language Models
+- **Ubicación:** `/llms.txt`
+- **Formato:** Markdown estructurado
+- **Contenido:** Mapa completo del sitio con:
+  - Enlaces directos a todas las especialidades
+  - Información de contacto y servicios
+  - Estructura clara para parsing automático
+  - Optimizado para comprensión por IA
+
+#### 5.4.3. Beneficios de la Optimización IA
+- ✅ **Visibilidad en ChatGPT:** El sitio aparece en respuestas de IA
+- ✅ **Mejor Crawlabilidad:** Bots IA pueden acceder a todo el contenido
+- ✅ **SEO Futuro:** Preparado para el SEO basado en IA
+- ✅ **Compatibilidad:** Funciona con crawlers tradicionales y de IA
+- ✅ **Sin Riesgo:** No modifica el build process existente
+
+### 5.5. Rendimiento Web
 
 - **Core Web Vitals**: Optimizado para puntuaciones altas
 - **First Contentful Paint**: < 1.5s
