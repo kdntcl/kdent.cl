@@ -34,10 +34,10 @@ export const metaTagsConfig: Record<string, MetaTagsConfig> = {
     ogTitle: 'Urgencias Dentales en Concepción | Atención 24/7 | KDENT',
     ogDescription: 'Urgencias dentales en Concepción. Atención inmediata para dolor de muelas, traumatismos y emergencias odontológicas.',
     ogUrl: 'https://kdnt.cl/urgencias',
-    ogImage: 'https://kdnt.cl/images/urgencias-og.webp',
+    ogImage: 'https://kdnt.cl/images/urgencias.webp',
     twitterTitle: 'Urgencias Dentales en Concepción | Atención 24/7 | KDENT',
     twitterDescription: 'Urgencias dentales en Concepción. Atención inmediata para dolor de muelas, traumatismos y emergencias odontológicas.',
-    twitterImage: 'https://kdnt.cl/images/urgencias-og.webp'
+    twitterImage: 'https://kdnt.cl/images/urgencias.webp'
   },
   '/endodoncia': {
     title: 'Endodoncia en Concepción | Tratamiento de Conducto | KDENT',
@@ -47,10 +47,10 @@ export const metaTagsConfig: Record<string, MetaTagsConfig> = {
     ogTitle: 'Endodoncia en Concepción | Tratamiento de Conducto | KDENT',
     ogDescription: 'Especialistas en endodoncia y tratamiento de conducto en Concepción. Tecnología rotatoria avanzada, sin dolor.',
     ogUrl: 'https://kdnt.cl/endodoncia',
-    ogImage: 'https://kdnt.cl/images/endodoncia-og.webp',
+    ogImage: 'https://kdnt.cl/images/endodoncia.webp',
     twitterTitle: 'Endodoncia en Concepción | Tratamiento de Conducto | KDENT',
     twitterDescription: 'Especialistas en endodoncia y tratamiento de conducto en Concepción. Tecnología rotatoria avanzada, sin dolor.',
-    twitterImage: 'https://kdnt.cl/images/endodoncia-og.webp'
+    twitterImage: 'https://kdnt.cl/images/endodoncia.webp'
   },
   '/implantologia': {
     title: 'Implantes Dentales en Concepción | Implantología | KDENT',
@@ -60,10 +60,10 @@ export const metaTagsConfig: Record<string, MetaTagsConfig> = {
     ogTitle: 'Implantes Dentales en Concepción | Implantología | KDENT',
     ogDescription: 'Implantes dentales en Concepción con garantía. Especialistas en implantología, cirugía guiada y rehabilitación completa.',
     ogUrl: 'https://kdnt.cl/implantologia',
-    ogImage: 'https://kdnt.cl/images/implantologia-og.webp',
+    ogImage: 'https://kdnt.cl/images/implantologia.webp',
     twitterTitle: 'Implantes Dentales en Concepción | Implantología | KDENT',
     twitterDescription: 'Implantes dentales en Concepción con garantía. Especialistas en implantología, cirugía guiada y rehabilitación completa.',
-    twitterImage: 'https://kdnt.cl/images/implantologia-og.webp'
+    twitterImage: 'https://kdnt.cl/images/implantologia.webp'
   },
   '/estetica-dental': {
     title: 'Estética Dental en Concepción | Diseño de Sonrisa | KDENT',
@@ -73,10 +73,10 @@ export const metaTagsConfig: Record<string, MetaTagsConfig> = {
     ogTitle: 'Estética Dental en Concepción | Diseño de Sonrisa | KDENT',
     ogDescription: 'Estética dental y diseño de sonrisa en Concepción. Carillas, blanqueamiento, coronas estéticas.',
     ogUrl: 'https://kdnt.cl/estetica-dental',
-    ogImage: 'https://kdnt.cl/images/estetica-dental-og.webp',
+    ogImage: 'https://kdnt.cl/images/estetica-dental.webp',
     twitterTitle: 'Estética Dental en Concepción | Diseño de Sonrisa | KDENT',
     twitterDescription: 'Estética dental y diseño de sonrisa en Concepción. Carillas, blanqueamiento, coronas estéticas.',
-    twitterImage: 'https://kdnt.cl/images/estetica-dental-og.webp'
+    twitterImage: 'https://kdnt.cl/images/estetica-dental.webp'
   },
   '/rehabilitacion-oral': {
     title: 'Rehabilitación Oral en Concepción | Prótesis Dentales | KDENT',
@@ -86,10 +86,10 @@ export const metaTagsConfig: Record<string, MetaTagsConfig> = {
     ogTitle: 'Rehabilitación Oral en Concepción | Prótesis Dentales | KDENT',
     ogDescription: 'Rehabilitación oral completa en Concepción. Prótesis fijas, removibles, sobre implantes.',
     ogUrl: 'https://kdnt.cl/rehabilitacion-oral',
-    ogImage: 'https://kdnt.cl/images/rehabilitacion-oral-og.webp',
+    ogImage: 'https://kdnt.cl/images/rehabilitacion-oral.webp',
     twitterTitle: 'Rehabilitación Oral en Concepción | Prótesis Dentales | KDENT',
     twitterDescription: 'Rehabilitación oral completa en Concepción. Prótesis fijas, removibles, sobre implantes.',
-    twitterImage: 'https://kdnt.cl/images/rehabilitacion-oral-og.webp'
+    twitterImage: 'https://kdnt.cl/images/rehabilitacion-oral.webp'
   },
   '/estetica-facial': {
     title: 'Estética Facial en Concepción | Rejuvenecimiento | KDENT',
@@ -99,10 +99,10 @@ export const metaTagsConfig: Record<string, MetaTagsConfig> = {
     ogTitle: 'Estética Facial en Concepción | Rejuvenecimiento | KDENT',
     ogDescription: 'Estética facial y rejuvenecimiento en Concepción. Botox, ácido hialurónico, tratamientos anti-edad.',
     ogUrl: 'https://kdnt.cl/estetica-facial',
-    ogImage: 'https://kdnt.cl/images/estetica-facial-og.webp',
+    ogImage: 'https://kdnt.cl/images/estetica-facial.webp',
     twitterTitle: 'Estética Facial en Concepción | Rejuvenecimiento | KDENT',
     twitterDescription: 'Estética facial y rejuvenecimiento en Concepción. Botox, ácido hialurónico, tratamientos anti-edad.',
-    twitterImage: 'https://kdnt.cl/images/estetica-facial-og.webp'
+    twitterImage: 'https://kdnt.cl/images/estetica-facial.webp'
   },
   '/sobre-nosotros': {
     title: 'Sobre Nosotros | Clínica KDENT Concepción | Nuestro Equipo',
