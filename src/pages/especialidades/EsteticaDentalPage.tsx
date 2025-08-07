@@ -31,9 +31,9 @@ const EsteticaDentalPage = () => {
 
   const ctaConfig = {
     title: '✨ ¡Sonrisa de Revista HOY!',
-    subtitle: 'DISEÑO DE SONRISA GRATIS - Ve cómo lucirás antes de decidir.',
-    whatsappUrl: 'https://wa.me/56922556473?text=Hola%20KDENT,%20quiero%20mi%20DISE%C3%91O%20DE%20SONRISA%20GRATIS%20y%20ver%20c%C3%B3mo%20lucir%C3%A9%20con%20est%C3%A9tica%20dental.%20%C2%BFCu%C3%A1ndo%20puedo%20agendar%3F',
-    whatsappText: '💬 DISEÑO GRATIS - WhatsApp',
+    subtitle: 'EVALUACIÓN GRATUITA - Plan a tu medida.',
+    whatsappUrl: 'https://wa.me/56922556473?text=Hola%20KDENT,%20quiero%20solicitar%20una%20hora%20para%20est%C3%A9tica%20dental,%20%C2%BFCu%C3%A1ndo%20puedo%20agendar%3F',
+    whatsappText: '💬 Evaluación Gratis - WhatsApp',
     phoneText: '📞 Llamar - Estética Dental',
     footerText: '✓ Sonrisa perfecta • ✓ Resultados inmediatos'
   };

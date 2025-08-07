@@ -30,7 +30,7 @@ const EsteticaFacialPage = () => {
   ];
 
   const ctaConfig = {
-    title: '✨ ¡Transformá tu Sonrisa HOY!',
+    title: '✨ ¡Transforma tu Sonrisa HOY!',
     subtitle: 'CONSULTA GRATUITA - Descubre cómo lucirás con nuestros tratamientos de estética facial.',
     whatsappUrl: 'https://wa.me/56922556473?text=Hola%20KDENT,%20quiero%20mi%20CONSULTA%20GRATUITA%20de%20est%C3%A9tica%20facial.%20%C2%BFCu%C3%A1ndo%20puedo%20agendar%3F',
     whatsappText: '💬 CONSULTA GRATIS - WhatsApp',
@@ -128,8 +128,8 @@ const EsteticaFacialPage = () => {
                   </div>
                   
                   <div>
-                    <h4 className="font-semibold text-purple-700 mb-2">Ojeras y Lágrimas:</h4>
-                    <p className="text-purple-600">Corrección de ojeras hundidas y surcos de lágrimas, rejuveneciendo la mirada de manera natural.</p>
+                    <h4 className="font-semibold text-purple-700 mb-2">Ojeras:</h4>
+                    <p className="text-purple-600">Corrección de ojeras hundidas, rejuveneciendo la mirada de manera natural.</p>
                   </div>
                 </div>
               </div>
@@ -249,7 +249,7 @@ const EsteticaFacialPage = () => {
               <p>Por qué elegir KDENT para tu estética facial:</p>
               
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li><strong>Especialistas certificados:</strong> Médicos con formación específica en medicina estética</li>
+                <li><strong>Especialistas certificados:</strong> Nuestros especialistas cuentan con formación específica en medicina estética</li>
                 <li><strong>Productos premium:</strong> Solo utilizamos marcas reconocidas mundialmente</li>
                 <li><strong>Técnicas avanzadas:</strong> Métodos de última generación para resultados naturales</li>
                 <li><strong>Ambiente seguro:</strong> Instalaciones médicas con todos los protocolos de seguridad</li>

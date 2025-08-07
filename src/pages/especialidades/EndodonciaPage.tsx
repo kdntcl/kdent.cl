@@ -41,7 +41,7 @@ const EndodonciaPage = () => {
   const faqs = [
     {
       question: '¿Duele el tratamiento de endodoncia?',
-      answer: 'No, el tratamiento de endodoncia se realiza con anestesia local efectiva que bloquea completamente el dolor. Durante el procedimiento no sentirás molestias. Post-operatoriamente puede haber leve sensibilidad que se controla con analgésicos comunes.'
+      answer: 'No, el tratamiento de endodoncia se realiza con anestesia local efectiva que bloquea completamente el dolor. Durante el procedimiento no sentirás molestias. Después del procedimiento puede haber leve sensibilidad que se controla con analgésicos comunes.'
     },
     {
       question: '¿Cuánto tiempo dura un tratamiento de conducto?',
@@ -105,7 +105,7 @@ const EndodonciaPage = () => {
                   <li>Dolor al morder o masticar</li>
                   <li>Hinchazón en la encía o rostro</li>
                   <li>Cambio de color del diente (oscurecimiento)</li>
-                  <li>Aparición de abscesos o fistulas</li>
+                  <li>Aparición de abscesos o fístulas</li>
                   <li>Dolor nocturno que interrumpe el sueño</li>
                 </ul>
               </div>

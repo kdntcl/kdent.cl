@@ -128,7 +128,6 @@ const ImplantologiaPage = () => {
               
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li><strong>Tomografía computarizada 3D:</strong> Planificación precisa y segura</li>
-                <li><strong>Cirugía guiada por computadora:</strong> Colocación exacta de implantes</li>
                 <li><strong>Implantes de titanio grado 4:</strong> Máxima biocompatibilidad</li>
                 <li><strong>Coronas de zirconia:</strong> Estética superior y resistencia</li>
                 <li><strong>Carga inmediata:</strong> Dientes el mismo día en casos seleccionados</li>

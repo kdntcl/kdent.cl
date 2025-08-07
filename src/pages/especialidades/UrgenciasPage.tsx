@@ -125,21 +125,6 @@ const UrgenciasPage = () => {
                 </div>
               </div>
               
-              <h3 className="text-xl font-display font-medium text-kdent-dark-blue mt-8 mb-4">
-                Tecnología Avanzada para Urgencias
-              </h3>
-              <p>
-                Contamos con equipamiento de última generación que nos permite brindar la mejor atención en situaciones de urgencia:
-              </p>
-              
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li><strong>Evaluación clínica especializada</strong> para diagnóstico preciso</li>
-                <li><strong>Sistemas de anestesia computarizada</strong> para máximo confort</li>
-                <li><strong>Instrumental rotatorio de alta velocidad</strong> para procedimientos rápidos</li>
-                <li><strong>Láser dental</strong> para tratamientos menos invasivos</li>
-                <li><strong>Microscopio dental</strong> para precisión en endodoncias de urgencia</li>
-              </ul>
-              
               <p>
                 Nuestro compromiso es brindarte alivio inmediato y una solución definitiva a tu problema dental. No dejes que el dolor arruine tu día - contáctanos ahora para atención de urgencia en Concepción.
               </p>
